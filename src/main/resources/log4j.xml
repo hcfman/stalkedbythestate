@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+	<!-- The default file appender -->
+	<appender name="out" class="org.apache.log4j.RollingFileAppender">
+
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="file" value="sbts.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p %c{3} [%t] - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="operationsAppender" class="org.apache.log4j.RollingFileAppender">
+
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="1" />
+		<param name="file" value="operations.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} - %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="rfxcomAppender" class="org.apache.log4j.RollingFileAppender">
+
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="1" />
+		<param name="file" value="rfxcom.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="phidgetAppender" class="org.apache.log4j.RollingFileAppender">
+
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="1" />
+		<param name="file" value="phidget.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="actionAppender" class="org.apache.log4j.RollingFileAppender">
+
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="1" />
+		<param name="file" value="action.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="asyncLog" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="out" />
+	</appender>
+
+	<!-- The console appender -->
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p %c{3} [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="operations">
+		<level value="INFO"/>
+		<appender-ref  ref="operationsAppender"/>
+	</logger>
+	
+	<logger name="rfxcom">
+		<level value="INFO"/>
+		<appender-ref  ref="rfxcomAppender"/>
+	</logger>
+	
+	<logger name="phidget">
+		<level value="INFO"/>
+		<appender-ref  ref="phidgetAppender"/>
+	</logger>
+	
+	<logger name="action">
+		<level value="INFO"/>
+		<appender-ref  ref="actionAppender"/>
+	</logger>
+	
+	<logger name="org.apache">
+		<level value="INFO" />
+	</logger>
+
+	<!-- root category (inherited by default by all categories) -->
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="asyncLog" />
+	</root>
+</log4j:configuration>

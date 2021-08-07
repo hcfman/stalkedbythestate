@@ -1,0 +1,33 @@
+<!-- New camera setup -->
+
+<form onsubmit="return false">
+	<fieldset>
+		<table style="width:100%">
+			<caption>New Profile</caption>
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" name="name" value="%{name}" id="profileName"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Tag Name</label></td>
+					<td><input type="text" name="tagname" value="%{tagname}"></td>
+				</tr>
+				<tr>
+					<td width="100px"><label>Time</label></td>
+					<td>
+						<input type="button" name="Add time" onclick="JSDialog.openDialog('jsp/content/forms/timespec-new.html', this, null, {buttonName:'Save', width:'500px'})" value="Add time">
+						<!-- Time specs -->
+						<table>
+							<tbody id="times"></tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

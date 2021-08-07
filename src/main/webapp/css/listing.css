@@ -1,0 +1,275 @@
+body {
+	background-image: none;
+}
+
+#main {
+	padding: 20px 10px 10px 10px;
+}
+
+#trigger-events {
+	width: 100%;
+	border-spacing: 0px;
+}
+
+#trigger-events th,
+#trigger-events td {
+	padding: 5px;
+	text-align: left;
+}
+
+#trigger-events tr:first-child td {
+	border-top: 1px dotted lightgrey;
+}
+
+/*#trigger-events td:first-child {
+	border-left: 1px solid lightgrey;
+}
+
+#trigger-events td:last-child {
+	border-right: 1px solid lightgrey;
+}*/
+
+#trigger-events td {
+	border-bottom: 1px dotted lightgrey;
+}
+
+#trigger-events > tbody > tr:hover {
+	background-color: white;
+}
+
+.trigger-event {
+	display: inline;
+	padding: 2px 15px;
+	text-align: center;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	cursor: pointer;
+	background-color: lightgrey;
+}
+
+.trigger-cam {
+	display: inline;
+	padding: 2px 15px;
+	text-align: center;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	cursor: pointer;
+}
+
+.visited {
+    border: 1px solid blue;
+}
+
+.cam1 {
+	background-color: #dbbee4;
+}
+
+.cam2 {
+	background-color: #bee4d8;
+}
+
+.cam3 {
+	background-color: #bebfe4;
+}
+
+.cam4 {
+	background-color: #e4d2be;
+}
+
+.cam5 {
+	background-color: #bed3e4;
+}
+
+.cam6 {
+	background-color: #e2e4be;
+}
+
+.cam7 {
+    background-color: #e4bebe;
+}
+
+.cam8 {
+	background-color: #dbbee4;
+}
+
+.cam9 {
+	background-color: #bee4d8;
+}
+
+.cam10 {
+	background-color: #bebfe4;
+}
+
+.cam11 {
+	background-color: #e4d2be;
+}
+
+.cam12 {
+	background-color: #bed3e4;
+}
+
+.cam13 {
+	background-color: #e2e4be;
+}
+
+.cam14 {
+	background-color: #e4bebe;
+}
+
+.cam15 {
+	background-color: #dbbee4;
+}
+
+.cam16 {
+	background-color: #bee4d8;
+}
+
+.cam17 {
+	background-color: #bebfe4;
+}
+
+.cam18 {
+	background-color: #e4d2be;
+}
+
+.cam19 {
+	background-color: #bed3e4;
+}
+
+.cam20 {
+	background-color: #e2e4be;
+}
+
+.cam21 {
+    background-color: #e4bebe;
+}
+
+#filters {
+	background-color: #5b5b5b;
+	padding-left: 180px;
+	color: white;
+}
+
+#filters .button-disclosure-on {
+	
+	color: white;
+	
+	display: inline-block;
+	margin: 5px 0px 5px 10px;
+	padding: 4px 20px;
+	
+	text-decoration: none;
+	background: transparent url(images/disclosure-triangle.gif) no-repeat left center;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#filters a.button-disclosure-off {
+	color: white;
+	
+	display: inline-block;
+	margin: 5px 0px 5px 10px;
+	padding: 4px 20px;
+	
+	text-decoration: none;
+	background: transparent url(../images/disclosure-triangle-off.gif) no-repeat left center;
+}
+
+#filter-overlay {
+	display: none;
+	
+	background: #747474;
+	
+	position: absolute;
+	top: 146px;
+	left: 0px;
+	width: 100%;
+}
+
+#filter-overlay .content {
+	margin: 20px;
+	padding-left: 180px;
+}
+
+.filter-trigger-event {
+	margin: 5px 10px 0px 10px;
+	color: #5b5b5b !important;
+}
+
+.filter-trigger-event {
+	padding: 2px 15px;
+	text-align: left;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	cursor: pointer;
+	background-color: lightgrey;
+}
+
+.filter-trigger-event label {
+	color: #5b5b5b;
+}
+
+td.buttons {
+	padding-top: 30px;
+}
+
+#filter-overlay h1 {
+	color: white;
+}
+
+#filters .button,
+#filter-overlay .button {
+	
+	color: #5b5b5b;
+	
+	display: block;
+	margin: 5px 20pxpx 5px 10px;
+	padding: 5px 20px;
+	
+	text-align: center;
+	width:  100%;
+	border: none;
+	
+	text-decoration: none;
+	background: #ededed;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#filters .button {
+	display: inline;
+	width: auto;
+	padding: 2px 10px;
+	background-color: #8e8e8e;
+	color: #ececec;
+}
+
+#filter-on {
+	padding-right: 20px;
+}
+
+input.input-round {
+	padding: 2px 20px;
+	border: 1px solid white;
+	background:  white;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	
+	box-shadow: inset 1px 1px 3px #4d4d4d;
+	-moz-box-shadow: inset 1px 1px 3px #4d4d4d;
+	-webkit-box-shadow: inset 1px 1px 3px #4d4d4d;
+}
+
+#trigger-daterange {
+	float: right;
+	padding: 6px 20px 0px 0px;
+}

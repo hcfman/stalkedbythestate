@@ -1,0 +1,109 @@
+<!-- New action setup -->
+<div id="newAction">
+	<form onsubmit="return false">
+		<table style="width:100%">
+			<caption>New action</caption>
+			<tbody>
+				<tr>
+					<td class="label"><label>Event trigger</label></td>
+					<td><select id="action_trigger" name="eventName" onchange="JSPostNotification('ActionEventNameChanged', this, {value:this.value})">
+						%{each, var:availableEventNames, repeatString:<option value="%value">%value</option>}
+					</select></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" id="action_name" name="name" value="%{name}" %{nameDisabledAttribute}></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" id="action_description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Type</label></td>
+					<td>
+						<select id="action_type" name="actionType" onchange="JSPostNotification('ActionTypeChanged', this, {value:this.value})">
+							<option value="0" selected>Select a action type</option>
+							%{each, var:actionTypeNames, repeatString:<option value="%value">%value</option>}
+						</select>
+					</td>
+				</tr>
+				
+				<tr id="actionAttributesRow">
+					<td class="label"><label>Attributes</label></td>
+					<td>
+						<table>
+							<tbody id="actionAttributes"></tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br>
+		<a href="javascript:;" onclick="ActionHelper.toggleAdvanced(this)">Show Advanced</a>
+		<br>
+		
+		<fieldset class="advanced-option">
+			<legend>Optional</legend>
+			
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td width="100px"><label>Allow guest</label></td>
+						<td><input id="action_allow_guest" type="checkbox" name="guest" value="yes" %{guestCheckAttribute} /></td>
+					</tr>
+					
+					<tr><td colspan="2"><hr /></td></tr>
+					
+					<tr>
+						<td width="100px"><label>Start delay</label></td>
+						<td>
+							<input type="text" name="delay" value="%{delay}" size="3" /> seconds
+						</td>
+					</tr>
+					
+					<tr><td colspan="2"><hr /></td></tr>
+					
+					<tr>
+						<td width="100px"><label>Time</label></td>
+						<td>
+							<input type="button" name="Add time" onclick="JSDialog.openDialog('forms/timespec-new.html', this, null, {buttonName:'Save', width:'500px'})" value="Add time">
+							<!-- Time specs -->
+							<table>
+								<tbody id="times"></tbody>
+							</table>
+						</td>
+					</tr>
+					
+					<tr><td colspan="2"><hr /></td></tr>
+					
+					<tr>
+						<td width="100px"><label>Profiles</label></td>
+						<td>
+							<select id="action_profiles"  name="profiles" multiple="multiple" onchange="JSPostNotification('ActionProfilesChanged', this, {value:this.value})">
+								%{each, var:availableProfiles, repeatString:<option value="%value">%value</option>}
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td width="100px"><label>Required tags</label></td>
+						<td>
+							<select id="action_pos_tags" name="positiveTagNames" multiple="multiple" onchange="JSPostNotification('ActionRequiredTagsChanged', this, {value:this.value})">
+								%{each, var:availableTagNames, repeatString:<option value="%value">%value</option>}
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td width="100px"><label>Disallowed tags</label></td>
+						<td>
+							<select id="action_neg_tags" name="negativeTagNames" multiple="multiple" onchange="JSPostNotification('ActionDisallowedTagsChanged', this, {value:this.value})">
+								%{each, var:availableTagNames, repeatString:<option value="%value">%value</option>}
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</form>
+</div>

@@ -1,0 +1,43 @@
+body {
+	background: black;
+}
+
+#video {
+	background-color: black;
+}
+
+#video-options {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 10;
+	padding: 20px;
+	
+	border: 2px solid white;
+	background-color: black;
+	opacity: 0.7;
+	
+	display: none;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#video-options a {
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	
+	background-color: white;
+	padding: 2px 10px;
+	
+	text-decoration: none;
+	
+	color: black;
+}
+
+#video-options a:hover {
+	color: white;
+	background-color: #5b5b5b;
+}

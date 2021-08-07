@@ -1,0 +1,37 @@
+<h2>New Phidget</h2>
+<form id="newPhidgetForm">
+	<fieldset>
+		
+		<table style="width:100%">
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" name="name" value="%{name}" id="phidgetName"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>SerialNumber</label></td>
+					<td><input type="text" name="serialNumber" value="%{serialNumber}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Port Size</label></td>
+					<td><select name="portSize" id="portSize">
+							<option value="4">4</option>
+							<option value="8">8</option>
+							<option value="16">16</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="label"><label>Ports</label></td>
+					<td>%{ports}</td>
+				</tr>	
+			
+			</tbody>
+		</table>
+	</fieldset>
+</form>

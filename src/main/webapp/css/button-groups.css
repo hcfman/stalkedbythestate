@@ -1,0 +1,14 @@
+table.data tbody tr:hover td {
+	background: none !important;
+}
+
+table.buttons {
+	width: 100%;
+	background-color: #F4F7FA;
+	margin: 10px;
+}
+
+td.group-name {
+	padding-top: 10px !important;
+	font-weight: bold;
+}

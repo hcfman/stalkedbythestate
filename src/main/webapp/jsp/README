@@ -1,0 +1,5 @@
+When a controller initialises it should register itself with JSDialog using: 
+	
+	JSDialog.setController( controller );
+	
+JSDialog will add some observer to the JSNotificationCenter so the controller can respond to dialog notifications.

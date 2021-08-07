@@ -1,0 +1,41 @@
+<form onsubmit="return false">
+	<fieldset>
+		<table style="width:100%">
+			<caption>New RFXCOM Command</caption>
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" id="commandName" name="name" value="%{name}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Type</label></td>
+					<td>
+						<select id="rfxcomType" name="rfxcomType" onchange="RfxcomController.listener.rfxcomTypeChanged(this)">
+							%{each, var:availableTypes, repeatString:<option value="%value">%value</options>}
+						</select>
+					</td>
+				</tr>
+				<tr class="eventNameRow">
+					<td class="label"><label>Event Name</label></td>
+					<td><input type="text" name="eventName" value="%{eventName}"></td>
+				</tr>
+				<tr class="eventNameRow">
+					<td width="100px"><label>Delay between events</label></td>
+					<td>
+						<input type="text" name="hysteresis" value="%{hysteresis}" size="3" /> ms
+					</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Command</label></td>
+					<td>
+						<div id="widget">%{widget}</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

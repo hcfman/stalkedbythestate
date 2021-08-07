@@ -1,0 +1,51 @@
+<!-- New camera setup -->
+
+<form onsubmit="return false">
+	<fieldset>
+		<table style="width:100%">
+			<caption>New Freak</caption>
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input id="freakName" type="text" name="name" value="%{name}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Protocol</label></td>
+					<td>
+						<select name="protocol" id="freakProtocol" onchange="FreakController.listener.protocolChanged(this)">
+							<option value="HTTP">HTTP</option>
+							<option value="HTTPS">HTTPS</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Hostname</label></td>
+					<td>
+						<input type="text" name="hostname" value="%{hostname}">
+						<span class="VerifyHostnameAttribute">&nbsp;<input type="checkbox" name="verifyHostname" checked>&nbsp;Verify hostname</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Port</label></td>
+					<td><input type="text" name="port" value="%{port}" size="3"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Username</label></td>
+					<td><input type="text" name="username" value="%{username}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Password</label></td>
+					<td><input type="password" name="password" value="%{password}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Guest</label></td>
+					<td><input type="checkbox" name="guest" id="freakGuest" value="yes" %{isGuestChecked}></td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

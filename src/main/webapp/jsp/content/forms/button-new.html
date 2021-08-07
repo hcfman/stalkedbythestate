@@ -1,0 +1,29 @@
+<form id="newButtonForm">
+	<fieldset>
+		
+		<input type="hidden" name="groupName" value="%{groupName}">
+		
+		<table style="width:100%">
+			<caption>New Button</caption>
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" name="eventName" value="%{eventName}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Guest</label></td>
+					<td>
+						<select name="guest">
+							<option value="false">False</option>
+							<option value="true">True</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

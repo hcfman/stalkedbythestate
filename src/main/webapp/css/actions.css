@@ -1,0 +1,38 @@
+
+
+
+.timespec-container {
+	background: #efefef;
+	padding: 6px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+
+.time-range-container {
+	padding: 3px 0px;
+}
+
+.action-parameters tr:hover td,
+#timeRanges tr:hover td {
+	background-color: #e2edf4;
+}
+.action-parameters {
+	width: auto;
+}
+
+.action-parameters td {
+	padding: 3px 10px;
+}
+
+.action-parameters td:last-child {
+	border: none;
+	background: none;
+}
+
+tr.dows td {
+	padding: 5px;
+}
+
+
+

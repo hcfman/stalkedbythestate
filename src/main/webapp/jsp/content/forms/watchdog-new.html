@@ -1,0 +1,24 @@
+<h2>New Watchdog Events</h2>
+<form id="newWatchdogForm">
+	<fieldset>
+		
+		<table style="width:100%">
+			<tbody>
+				<tr>
+					<td class="label"><label>Resulting event</label></td>
+					<td><input type="text" name="result" value="%{result}" id="watchdogName"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Within seconds</label></td>
+					<td><input type="text" name="withinSeconds" value="%{withinSeconds}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Trigger events</label></td>
+					<td><select id="eventNames" name="triggerEventNames" multiple>
+		%{each, var:availableEventNames, repeatString:<option value="%value">%value</options>}
+	</select></td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

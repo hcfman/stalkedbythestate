@@ -1,0 +1,31 @@
+<h2>New User</h2>
+<form id="newUserForm">
+	<fieldset>
+		
+		<table style="width:100%">
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" name="name" value="%{name}" id="userName"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Password</label></td>
+					<td><input type="password" name="password" value="%{password}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Password again</label></td>
+					<td><input type="password" name="password2" value="%{password}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Role</label></td>
+					<td>
+						<select name="role" id="userRole" onchange="UsersController.listener.onRoleChanged('%{name}')">
+							<option value="admin" id="admin-role">Admin</option>
+							<option value="guest">Guest</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

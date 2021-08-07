@@ -1,0 +1,30 @@
+#scheduleContainer td {
+	padding: 2px;
+}
+
+#scheduleContainer h2 {
+	background-color: #b4cce5;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 5px;
+	text-shadow: 0px 1px 1px #fff;
+	font-size: 18px;
+	color: #042c54;
+}
+
+.schedule {
+	width: 250px;
+	background-color: #F4F7FA;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+}
+
+.schedule table {
+	width: 230px;
+	margin: 0px auto;
+}
+
+.times {
+	text-align: center;
+}

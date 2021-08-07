@@ -1,0 +1,90 @@
+/* Camera Devices */
+#cameraDevicesConfigTable {
+	width: 100%;
+	margin-top: 20px;
+}
+
+td.cameraDeviceList {
+	background-color: white;
+	padding: 10px;
+	width: 250px
+}
+
+td.cameraDeviceList .cameraDevice {
+	cursor: pointer;
+	color: black;
+	text-shadow: #eee 0px 1px 0px;
+	padding: 5px 10px;
+	background-color: white;
+	border-bottom: 1px solid #ccc;
+}
+
+td.cameraDeviceList .cameraDevice:hover {
+	background: #dddddd;
+}
+
+td.cameraDeviceList .current,
+td.cameraDeviceList .current:hover {
+	color: white;
+	text-shadow: #102f50 0px 1px 0px;
+	background: #035fb9 url(../images/ListItemBackgroundHilite.gif) repeat-x;
+	border-color: white;
+}
+
+td.cameraDeviceConfig {
+	padding: 10px;
+}
+
+td.cameraDeviceConfig div {
+	display: none;
+}
+
+td.cameraDeviceConfig div.current {
+	display: block;
+}
+
+td.cameraDeviceConfig label {
+	display: block;
+	margin: 10px 0px 5px 0px;
+}
+
+div#cameraDeviceConfigTemplate {
+	display: none;
+}
+
+td.buttonBar {
+	background-color: white;
+	height: 20px;
+}
+
+div.buttonBar .button {
+	float: left;
+	height: 20px;
+	width: 23px;
+	cursor: pointer;
+	background-color: white;
+	margin-top: 5px;
+}
+
+div.buttonBar .add {
+	background: white url(../images/PlusMinus.gif) no-repeat left top;
+}
+
+div.buttonBar .remove {
+	background: white url(../images/PlusMinus.gif) no-repeat -23px top;
+}
+
+#dialog-form-newdevice label,
+.cameraDeviceConfig label {
+	display: block;
+	margin: 10px 0px 4px 0px;
+}
+
+#dialog-form-newdevice input,
+.cameraDeviceConfig input {
+	width: 100%;
+}
+
+.cameraDeviceConfig {
+	display: none;
+}

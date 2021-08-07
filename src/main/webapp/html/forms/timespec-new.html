@@ -1,0 +1,44 @@
+<!-- New timespec setup -->
+<div id="newTimespec">
+	<form onsubmit="return false">
+		<table style="width:100%">
+			<caption>New time table</caption>
+			<tbody>
+				<tr class="no-delete"><td colspan="7">
+					<input type="button" name="Add time range" onclick="JSDialog.openDialog('forms/timerange-new.html', this, null, {buttonName:'Save', width:'300px'})" value="Add time range">
+				</td></tr>
+				
+				<tr class="dows">
+					<td>
+						<span class="day-abbr">Mo</span> <input type="checkbox" class="dow" name="dows1" value="Mo"><br>
+						<span class="day-abbr">Tu</span> <input type="checkbox" class="dow" name="dows2" value="Tu"><br>
+						<span class="day-abbr">We</span> <input type="checkbox" class="dow" name="dows3" value="We"><br>
+						<span class="day-abbr">Th</span> <input type="checkbox" class="dow" name="dows4" value="Th"><br>
+						<span class="day-abbr">Fr</span> <input type="checkbox" class="dow" name="dows5" value="Fr"><br>
+						<span class="day-abbr">Sa</span> <input type="checkbox" class="dow" name="dows6" value="Sa"><br>
+						<span class="day-abbr">Su</span> <input type="checkbox" class="dow" name="dows7" value="Su">
+					</td>
+					<td>
+						<table cellspacing="0">
+							<tbody id="timeRanges">%{timeRanges}</tbody>
+						</table>
+					</td>
+				</tr>
+				<!--
+				<tr class="no-delete">
+					<td>Mo</td><td>Tu</td><td>We</td><td>Th</td><td>Fr</td><td>Sa</td><td>Su</td>
+				</tr>
+				<tr class="no-delete">
+					<td><input type="checkbox" class="dow" name="dows1" value="Mo"></td>
+					<td><input type="checkbox" class="dow" name="dows2" value="Tu"></td>
+					<td><input type="checkbox" class="dow" name="dows3" value="We"></td>
+					<td><input type="checkbox" class="dow" name="dows4" value="Th"></td>
+					<td><input type="checkbox" class="dow" name="dows5" value="Fr"></td>
+					<td><input type="checkbox" class="dow" name="dows6" value="Sa"></td>
+					<td><input type="checkbox" class="dow" name="dows7" value="Su"></td>
+				</tr>
+				-->
+			</tbody>
+		</table>
+	</form>
+</div>

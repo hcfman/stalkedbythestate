@@ -1,0 +1,74 @@
+<!-- New camera setup -->
+
+<form onsubmit="return false">
+	<input type="hidden" name="index" value="%{index}">
+	<fieldset>
+		<table style="width:100%">
+			<caption>New Camera</caption>
+			<tbody>
+				<tr>
+					<td class="label"><label>Name</label></td>
+					<td><input type="text" name="name" value="%{name}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Description</label></td>
+					<td><input type="text" name="description" value="%{description}"></td>
+				</tr>
+				<tr>
+					<td><label>Protocol</label></td>
+					<td>
+						<select id="cameraProtocol" name="protocol" onchange="CameraController.listener.protocolChanged(this)">
+							<option value="HTTP">HTTP</option>
+							<option value="HTTPS">HTTPS</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="label"><label>URL</label></td>
+					<td>
+						<input type="text" name="url" value="%{url}">
+						<span class="VerifyHostnameAttribute">&nbsp;<input type="checkbox" name="verifyHostname" checked>&nbsp;Verify hostname</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Username</label></td>
+					<td><input type="text" name="username" value="%{username}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Password</label></td>
+					<td><input type="password" name="password" value="%{password}"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Continue seconds</label></td>
+					<td><input type="text" name="continueSeconds" value="%{continueSeconds}" size="3"> seconds</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Buffer seconds</label></td>
+					<td><input type="text" name="bufferSeconds" value="%{bufferSeconds}" size="3"> seconds</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Priority</label></td>
+					<td><input type="text" name="priority" value="%{priority}" size="3"></td>
+				</tr>
+				<tr>
+					<td class="label"><label>Caching allowed</label></td>
+					<td>
+						<select name="cachingAllowed" id="cameraCachingAllowed">
+							<option value="false">False</option>
+							<option value="true">True</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="label"><label>Guest</label></td>
+					<td>
+						<select name="guest" id="cameraGuest">
+							<option value="false">False</option>
+							<option value="true">True</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>

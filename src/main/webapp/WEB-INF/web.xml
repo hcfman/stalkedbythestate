@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/jsp/content/components/PageNotFound.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/jsp/content/components/ErrorPage.jsp</location>
+    </error-page>
+
+    <!--<servlet>-->
+        <!--<servlet-name>default</servlet-name>-->
+        <!--<servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>debug</param-name>-->
+            <!--<param-value>0</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>listings</param-name>-->
+            <!--<param-value>false</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
+
+
+    <security-constraint>
+
+        <web-resource-collection>
+            <web-resource-name>Protected Area</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>sbts</role-name>
+        </auth-constraint>
+
+    </security-constraint>
+
+    <security-constraint>
+
+        <web-resource-collection>
+            <web-resource-name>Guest Area</web-resource-name>
+            <url-pattern>/guest/*</url-pattern>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>guest</role-name>
+            <role-name>sbts</role-name>
+        </auth-constraint>
+
+    </security-constraint>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>sbts</realm-name>
+    </login-config>
+
+    <security-role>
+        <description>Admin for SBTS</description>
+        <role-name>sbts</role-name>
+    </security-role>
+
+    <security-role>
+        <description>Guest usage</description>
+        <role-name>guest</role-name>
+    </security-role>
+
+</web-app>

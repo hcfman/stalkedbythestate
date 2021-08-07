@@ -1,0 +1,12 @@
+#video-options {
+	padding: 20px 0px;
+}
+
+#video-options a {
+	padding: 10px 20px;
+	margin-right: 10px;
+}
+
+#video-element {
+	width: 100%;
+}

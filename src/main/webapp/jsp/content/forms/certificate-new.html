@@ -1,0 +1,40 @@
+<h2>New Certificate</h2>
+<form>
+	<fieldset>
+		
+		<table>
+			<tbody>
+				<tr>
+					<td><label>Common Name</label></td>
+					<td><input type="text" name="commonName"></td>
+				</tr>
+				<tr>
+					<td><label>Organisation</label></td>
+					<td><input type="text" name="organisation"></td>
+				</tr>
+				<tr>
+					<td><label>Organisational Unit</label></td>
+					<td><input type="text" name="organisationalUnit"></td>
+				</tr>
+				<tr>
+					<td><label>State or Province</label></td>
+					<td><input type="text" name="state"></td>
+				</tr>
+				<tr>
+					<td><label>Locality or City</label></td>
+					<td><input type="text" name="locality"></td>
+				</tr>
+				<tr>
+					<td><label>Country</label></td>
+					<td><input type="text" name="country" maxlength="2" onblur="this.value = this.value.toUpperCase()"></td>
+				</tr>
+				
+				<tr>
+					<td><label>Validity (days)</label></td>
+					<td><input type="text" name="validity" value="3650"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</fieldset>
+</form>
