@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.fetchupdate;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.io.InputStream;

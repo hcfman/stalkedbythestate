@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import java.util.SortedSet;
 
 public class RemoteCamTriggerEvent extends AbstractEvent implements Nameable {

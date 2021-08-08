@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.streamer;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.google.gson.Gson;
 import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
 import com.stalkedbythestate.sbts.eventlib.HttpAuthenticator;

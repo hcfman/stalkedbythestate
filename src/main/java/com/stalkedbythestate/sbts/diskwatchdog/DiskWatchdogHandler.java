@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.diskwatchdog;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.DiskState;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;

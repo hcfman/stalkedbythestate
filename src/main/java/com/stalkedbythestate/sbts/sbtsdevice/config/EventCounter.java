@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.config;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;

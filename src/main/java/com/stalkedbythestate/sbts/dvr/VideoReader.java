@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.dvr;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.eventlib.EventType;
 import com.stalkedbythestate.sbts.eventlib.HttpAuthenticator;

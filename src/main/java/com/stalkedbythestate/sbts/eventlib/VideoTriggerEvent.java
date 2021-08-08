@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class VideoTriggerEvent extends AbstractEvent {
 	private int cameraIndex;
 	private String description;

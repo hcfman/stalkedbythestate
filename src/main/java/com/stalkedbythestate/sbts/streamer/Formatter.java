@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.streamer;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.diskwatchdog.DiskWatchdogHandler;
 import com.stalkedbythestate.sbts.freakutils.ScriptRunner;
 import com.stalkedbythestate.sbts.freakutils.ScriptRunnerResult;

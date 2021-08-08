@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.streamer;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.json.NetworkJSON;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;

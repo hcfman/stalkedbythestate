@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.config;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomCommand;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomOperator;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomType;

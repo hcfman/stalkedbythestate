@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.config;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;
 
 public class Schedule {

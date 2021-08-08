@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eh;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 
 public interface SyntheticEventManager {
 

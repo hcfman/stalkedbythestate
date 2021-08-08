@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.SpringConfiguration;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import org.apache.catalina.core.Constants;
 import org.apache.log4j.Logger;
 import org.springframework.boot.web.servlet.ServletContextInitializer;

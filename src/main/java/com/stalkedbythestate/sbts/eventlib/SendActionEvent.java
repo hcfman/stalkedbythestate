@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 
 public class SendActionEvent extends AbstractEvent {

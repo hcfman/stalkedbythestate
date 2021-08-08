@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.streamer;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import org.w3c.dom.Document;
 
 import javax.xml.XMLConstants;

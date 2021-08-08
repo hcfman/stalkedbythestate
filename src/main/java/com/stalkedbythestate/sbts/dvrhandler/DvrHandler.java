@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.dvrhandler;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.dvr.Defaults;
 import com.stalkedbythestate.sbts.dvr.VideoReader;
 import com.stalkedbythestate.sbts.eventlib.*;

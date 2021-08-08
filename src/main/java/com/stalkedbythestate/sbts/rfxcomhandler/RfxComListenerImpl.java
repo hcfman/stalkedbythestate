@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.rfxcomhandler;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.eventlib.RfxcomTriggerEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.rfxcomlib.Packet;

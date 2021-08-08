@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.rfxcomhandler;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class PacketUtils {
 
 	public String packetToString(int[] ints) {

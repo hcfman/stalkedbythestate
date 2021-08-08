@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.system;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import org.apache.log4j.Logger;
 

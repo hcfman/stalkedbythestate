@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.json;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class CameraStatusJSON {
 	private String name;
 	private int index;

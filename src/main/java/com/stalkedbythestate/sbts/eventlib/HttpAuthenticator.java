@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import org.apache.log4j.Logger;
 
 import java.net.Authenticator;

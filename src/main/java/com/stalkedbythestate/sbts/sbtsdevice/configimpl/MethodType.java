@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.configimpl;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public enum MethodType {
 	GET, POST;
 

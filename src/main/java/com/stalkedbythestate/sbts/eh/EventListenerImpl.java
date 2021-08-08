@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eh;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.eventlib.SyntheticTriggerEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import org.apache.log4j.Logger;

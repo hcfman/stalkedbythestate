@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.freak;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.cleanerhandler.CleanerHandler;
 import com.stalkedbythestate.sbts.diskwatchdog.DiskWatchdogHandler;
 import com.stalkedbythestate.sbts.dvrhandler.DvrHandler;

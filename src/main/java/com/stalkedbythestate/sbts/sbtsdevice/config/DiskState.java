@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.config;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public enum DiskState {
 	UN_INITIALISED,
 	NO_DISK,

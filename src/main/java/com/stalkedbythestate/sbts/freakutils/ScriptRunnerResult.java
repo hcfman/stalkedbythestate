@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.freakutils;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 
 public class ScriptRunnerResult {
 	private int result;

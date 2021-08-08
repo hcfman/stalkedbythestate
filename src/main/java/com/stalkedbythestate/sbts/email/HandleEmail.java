@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.email;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.EmailConfig;

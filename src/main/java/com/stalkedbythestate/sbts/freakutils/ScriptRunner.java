@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.freakutils;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;

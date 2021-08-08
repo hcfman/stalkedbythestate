@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.freak.api;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.eventlib.EventListener;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;

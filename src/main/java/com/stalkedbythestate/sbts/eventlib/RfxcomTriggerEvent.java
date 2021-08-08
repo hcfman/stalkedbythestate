@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class RfxcomTriggerEvent extends AbstractEvent implements Nameable, ContainsPacket {
 	private String eventName;
 	private long eventTime;

@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.rfxcomlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public enum RfxcomType {
 	GENERIC_INPUT, GENERIC_OUTPUT;
 

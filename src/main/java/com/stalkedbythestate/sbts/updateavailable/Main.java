@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.updateavailable;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.*;

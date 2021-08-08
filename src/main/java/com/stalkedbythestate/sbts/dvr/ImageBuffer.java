@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.dvr;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class ImageBuffer {
 	private long timestamp;
 	private byte buffer[];

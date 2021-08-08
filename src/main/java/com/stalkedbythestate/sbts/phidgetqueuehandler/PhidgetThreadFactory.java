@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.phidgetqueuehandler;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import java.util.concurrent.ThreadFactory;
 
 public class PhidgetThreadFactory implements ThreadFactory {

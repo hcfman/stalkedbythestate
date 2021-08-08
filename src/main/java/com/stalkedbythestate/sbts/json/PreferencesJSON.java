@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.json;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class PreferencesJSON {
 	private String webPrefix;
 	private int connectTimeout;

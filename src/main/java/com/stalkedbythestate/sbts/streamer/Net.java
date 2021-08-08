@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.streamer;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.sbtsdevice.config.HttpTrigger;
 import com.stalkedbythestate.sbts.eventlib.HttpTriggerEvent;
 import com.stalkedbythestate.sbts.freak.Freak;

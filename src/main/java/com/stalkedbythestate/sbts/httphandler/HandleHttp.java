@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.httphandler;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.eventlib.ContainsPacket;
 import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.eventlib.HttpAuthenticator;

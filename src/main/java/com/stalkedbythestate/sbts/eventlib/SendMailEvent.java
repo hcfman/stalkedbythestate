@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class SendMailEvent extends AbstractEvent {
 	private String fromAddress;
 	private String toAddress;

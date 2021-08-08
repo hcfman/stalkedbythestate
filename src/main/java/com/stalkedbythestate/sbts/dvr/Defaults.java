@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.dvr;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class Defaults {
 	private int bufferSeconds = 6;
 	private int bufferFramesPerSecond = 5;

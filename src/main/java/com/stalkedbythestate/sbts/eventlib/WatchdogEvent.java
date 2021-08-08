@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import java.io.Serializable;
 
 public class WatchdogEvent extends AbstractEvent implements Nameable, Serializable {

@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.config;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class StringHelper {
 	
 	synchronized public static String repeatChar(char c, int count) {

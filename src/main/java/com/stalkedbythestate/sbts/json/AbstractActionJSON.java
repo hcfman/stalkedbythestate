@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.json;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import com.stalkedbythestate.sbts.sbtsdevice.config.FlagType;
 import com.stalkedbythestate.sbts.sbtsdevice.config.ActionType;
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;

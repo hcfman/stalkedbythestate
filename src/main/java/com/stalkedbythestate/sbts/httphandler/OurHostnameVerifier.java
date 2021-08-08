@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.httphandler;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 import org.apache.log4j.Logger;
 
 import javax.net.ssl.HostnameVerifier;

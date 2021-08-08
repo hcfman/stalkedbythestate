@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.diskwatchdog;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class SpaceJSON {
 	private long available;
 	private long used;

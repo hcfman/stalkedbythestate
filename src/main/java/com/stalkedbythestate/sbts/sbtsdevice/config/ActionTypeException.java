@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.sbtsdevice.config;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public class ActionTypeException extends Exception {
 
 	private static final long serialVersionUID = 4891405411888000565L;

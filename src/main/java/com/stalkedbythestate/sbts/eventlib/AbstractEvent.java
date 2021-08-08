@@ -1,5 +1,7 @@
 package com.stalkedbythestate.sbts.eventlib;
 
+// Copyright (c) 2021 Kim Hendrikse
+
 public abstract class AbstractEvent implements Event {
 	protected EventType eventType;
 	protected long eventTime;
