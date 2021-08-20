@@ -1,6 +1,6 @@
 # Stalked by the state
 
-Preventative/proactive security state machine
+Preventative/proactive home and business security state machine
 
 StalkedByTheState is a physical security system that employs convolutional neural network based computer vision for alert generation.
 
