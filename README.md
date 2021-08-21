@@ -4,7 +4,9 @@ Preventative/proactive home and business security state machine
 
 StalkedByTheState is a physical security system that employs convolutional neural network based computer vision for alert generation.
 
-Designed to operate as a robust applicance that is installed in just a few commands.
+Designed to operate as a robust applicance that is installed in just a few commands, installed with this project:
+
+https://github.com/hcfman/sbts-install
 
 Currently it installs to the NVIDIA Jetson nano, NX and AGX.
 
