@@ -14,7 +14,7 @@ StalkedByTheState supports PJ Reddie's YoloV3 and AlexeyAB's YoloV3 and YoloV4 o
 
 In addition to providing video alerting and logging it also supports some limited local control. It supports the Phidget interfacekit and rfxtrx433 transceiver devices for hardware input and output and 433 Mhz device input and output control.
 
-The whole system is installed with just one command. You can choose the Yolo algorithm by uncommented the one you wish.
+The whole system is **installed with just one command**. You can choose the Yolo algorithm by uncommented the one you wish.
 
 This release is in preparation stage
 
