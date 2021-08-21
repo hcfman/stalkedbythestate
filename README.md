@@ -10,6 +10,8 @@ https://github.com/hcfman/sbts-install
 
 Currently it installs to the NVIDIA Jetson nano, NX and AGX.
 
+StalkedByTheState supports PJ Reddie's YoloV3 and AlexeyAB's YoloV3 and YoloV4 out of the box. A mechanism is provided that continuously scans several cameras evaluating each image against a flexible alert definition. If it a hit occurs then an event is triggered that can sent a video alert (Amongst many other things).
+
 In addition to providing video alerting and logging it also supports some limited local control. It supports the Phidget interfacekit and rfxtrx433 transceiver devices for hardware input and output and 433 Mhz device input and output control.
 
 This release is in preparation stage
