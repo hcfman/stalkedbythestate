@@ -1,4 +1,4 @@
-# Stalked by the state
+# Stalked By The State
 
 Preventative/proactive home and business security state machine
 
