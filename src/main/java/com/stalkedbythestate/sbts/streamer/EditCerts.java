@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +24,7 @@ import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
 
-@RequestMapping("")
+@WebServlet(urlPatterns={"/editcerts"})
 public class EditCerts extends HttpServlet {
 	private static final long serialVersionUID = 1960213686411485822L;
 	private static final Logger logger = Logger.getLogger(EditCerts.class);
@@ -52,51 +53,6 @@ public class EditCerts extends HttpServlet {
 		}
 	}
 
-	// private void editCert(CertificateJSON[] certificateList) throws Exception
-	// {
-	// KeyStore ks = sbtsConfig.getCertificateConfig().getKeyStore();
-	//
-	// if (ks == null) {
-	// CertTools certTools = new CertTools();
-	// ks = certTools.initialiseKeyStore(sbtsConfig, ks);
-	// }
-	// if (logger.isDebugEnabled()) logger.debug("ks: " + ks);
-	//
-	// Set<String> keySet = new HashSet<String>();
-	// for (CertificateJSON certificateJSON : certificateList)
-	// keySet.add(certificateJSON.getAlias());
-	//
-	// for (Enumeration<String> e = ks.aliases(); e.hasMoreElements();) {
-	// String alias = e.nextElement();
-	// if (!ks.containsAlias(alias))
-	// continue;
-	//
-	// if (!alias.equals("sbts") &&
-	// !sbtsConfig.getFreakConfig().getFreakMap().containsKey(alias) &&
-	// !keySet.contains(alias))
-	// try {
-	// ks.deleteEntry(alias);
-	// if (logger.isDebugEnabled())
-	// logger.debug("Deleted existing truststore entry for sbts");
-	// } catch (Exception e1) {
-	// if (logger.isDebugEnabled())
-	// logger.debug("Cannot delete truststore entry for alias: " + alias);
-	// }
-	// }
-	//
-	// char SEP = File.separatorChar;
-	// File truststoreFile = new File(Common.SBTS_BASE + SEP + "certs" + SEP +
-	// "truststore.jks");
-	//
-	// String password = sbtsConfig.getSettingsConfig().getTruststorePassword();
-	// FileOutputStream outFile = new FileOutputStream(truststoreFile);
-	// ks.store(outFile, password.toCharArray());
-	// outFile.close();
-	//
-	// sbtsConfig.getCertificateConfig().setKeyStore(ks);
-	// }
-
-	@RequestMapping("/editcerts")
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		if (freak == null)
