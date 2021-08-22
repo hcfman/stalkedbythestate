@@ -202,7 +202,7 @@ public class HandleHttp implements Runnable {
 			if (logger.isDebugEnabled())
 				logger.debug("Input consumed");
 		} catch (IOException e) {
-			opLogger.error("Input/Output error sending to " + urlString);
+			opLogger.error("Input/Output error sending to " + urlString + ": " + e.getMessage());
 		} finally {
 			try {
 				if (in != null)
