@@ -1,11 +1,18 @@
 <h1>Maintenance</h1>
 
-
 <div class="system-section">
 	<div class="section-content">
 		<h2>Reboot</h2>
 		<br> <input type="button" value="Reboot system"
 			onclick="MaintenanceController.rebootSystem();">
+	</div>
+</div>
+
+<div class="system-section">
+	<div class="section-content">
+		<h2>Restart</h2>
+		<br> <input type="button" value="Restart system"
+					onclick="MaintenanceController.rebootSystem();">
 	</div>
 </div>
 

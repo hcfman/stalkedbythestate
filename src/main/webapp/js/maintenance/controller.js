@@ -72,7 +72,23 @@ MaintenanceController = function () {
 			Reboot('Rebooting the system', 120, '.');
 		}
 	};
-	
+
+	this.rebootSystem = function () {
+		if ( confirm('Are you sure you want to restart the system?') ) {
+
+			jQuery.ajax( {
+				cache	: false,
+				url		: 'restart',
+				type	: 'GET',
+
+				contentType: 'application/json',
+				dataType: 'json'
+			});
+
+			Reboot('Restarting the system', 20, '.');
+		}
+	};
+
 	this.shutdownSystem = function () {
 		if ( confirm('Are you sure you want to shutdown the system?') ) {
 			
