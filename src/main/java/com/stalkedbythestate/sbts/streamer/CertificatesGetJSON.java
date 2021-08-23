@@ -89,16 +89,16 @@ public class CertificatesGetJSON extends HttpServlet {
 
         try {
             // Save all certificates so we can look them up by the DN of the subject
-            Map<String, Certificate> AllCertificates = new HashMap<String, Certificate>();
+            Map<String, X509Certificate> allCertificates = new HashMap<String, X509Certificate>();
             for (Enumeration<String> entry = keyStore.aliases(); entry.hasMoreElements(); ) {
                 String alias = entry.nextElement();
                 if (!keyStore.containsAlias(alias))
                     continue;
 
                 Certificate cert = keyStore.getCertificate(alias);
-                if (cert instanceof Certificate) {
+                if (cert instanceof X509Certificate) {
                     X509Certificate x509Certificate = (X509Certificate) cert;
-                    AllCertificates.put(((X509Certificate) cert).getSubjectDN().toString(), cert);
+                    allCertificates.put(x509Certificate.getSubjectDN().toString(), (X509Certificate) cert);
                 }
             }
 
@@ -123,16 +123,16 @@ public class CertificatesGetJSON extends HttpServlet {
                 if (storeChain != null && storeChain.length > 0) {
                     chain.addAll(Arrays.asList(storeChain));
 
-                    // Now add the root, which is not present in the chain
                     Certificate lastCert = storeChain[storeChain.length - 1];
                     if (lastCert instanceof X509Certificate &&
                             !((X509Certificate) lastCert).getIssuerDN().equals(((X509Certificate) lastCert).getSubjectDN())) {
                         X509Certificate x509Certificate = (X509Certificate) lastCert;
-                        Certificate certificate = AllCertificates.get(x509Certificate.getIssuerDN().toString());
+                        Certificate certificate = allCertificates.get(x509Certificate.getIssuerDN().toString());
                         if (certificate != null)
                             chain.add(certificate);
                     }
                 } else {
+                    // Now add the root, which is not present in the chain
                     chain.add(mainCert);
                 }
                 String entryType;
@@ -156,8 +156,6 @@ public class CertificatesGetJSON extends HttpServlet {
 
                     }
 
-                    certificateJSON.setValidFrom(keyStore
-                            .getCreationDate(alias).toString());
                     certificateChainJSON.getCertificateChain().add(
                             certificateJSON);
                 }
