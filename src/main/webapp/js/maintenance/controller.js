@@ -73,7 +73,7 @@ MaintenanceController = function () {
 		}
 	};
 
-	this.rebootSystem = function () {
+	this.restartSystem = function () {
 		if ( confirm('Are you sure you want to restart the system?') ) {
 
 			jQuery.ajax( {

@@ -12,7 +12,7 @@
 	<div class="section-content">
 		<h2>Restart</h2>
 		<br> <input type="button" value="Restart system"
-					onclick="MaintenanceController.rebootSystem();">
+					onclick="MaintenanceController.restartSystem();">
 	</div>
 </div>
 
