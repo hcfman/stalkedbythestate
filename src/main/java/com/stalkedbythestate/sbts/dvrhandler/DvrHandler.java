@@ -2,7 +2,6 @@ package com.stalkedbythestate.sbts.dvrhandler;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import com.stalkedbythestate.sbts.dvr.Defaults;
 import com.stalkedbythestate.sbts.dvr.VideoReader;
 import com.stalkedbythestate.sbts.eventlib.*;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
@@ -26,7 +25,6 @@ public class DvrHandler {
 	private final LinkedBlockingQueue<Event> eventQueue;
 	private AtomicBoolean ready = new AtomicBoolean(false);
 	private ConcurrentHashMap<Integer, LinkedBlockingQueue<Event>> cameraEventQueues;
-	private final Defaults videoDefaults = new Defaults();
 	private SbtsDeviceConfig sbtsConfig;
 
 	public DvrHandler(final FreakApi freak, final LinkedBlockingQueue<Event> eventQueue) {
@@ -42,6 +40,8 @@ public class DvrHandler {
 
 	// Actually spawn the readers, this can be called after a reconfigure event
 	private synchronized void spawnReaders() {
+		sbtsConfig = freak.getSbtsConfig();
+
 		if (logger.isDebugEnabled())
 			logger.debug("Spawning videoReaders");
 		final Map<Integer, CameraDevice> cameraDevices = sbtsConfig.getCameraConfig()
@@ -68,6 +68,7 @@ public class DvrHandler {
 	}
 
 	private void handle() {
+		spawnReaders();
 
 		final Thread thread = new Thread(() -> {
 			ready.set(true);
