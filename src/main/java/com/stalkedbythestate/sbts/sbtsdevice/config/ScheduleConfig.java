@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.sbtsdevice.config;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScheduleConfig {
-	private static final Logger logger = Logger.getLogger(ScheduleConfig.class);
+	private static final Logger logger = LoggerFactory.getLogger(ScheduleConfig.class);
 	private volatile List<Schedule> schedules = new ArrayList<Schedule>();
 
 	public List<Schedule> getSchedules() {

@@ -4,14 +4,15 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.Link;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.CameraListJSON;
 import com.stalkedbythestate.sbts.json.LinkBuilderJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.Link;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -28,7 +29,7 @@ import java.util.concurrent.Executors;
 @WebServlet(urlPatterns={"/linkbuildergetjson"})
 public class LinkBuilderGetJSON extends HttpServlet {
 	private static final long serialVersionUID = -8634871408748604652L;
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(LinkBuilderGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private List<RemoteFreakSpec> remoteFreakSpecList;

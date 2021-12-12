@@ -3,14 +3,15 @@ package com.stalkedbythestate.sbts.streamer;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.google.gson.Gson;
-import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
 import com.stalkedbythestate.sbts.eventlib.HttpAuthenticator;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.ViewJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -21,7 +22,7 @@ import java.util.List;
 import java.util.Set;
 
 public class HandleRemoteCamFetch implements Runnable {
-	private final static Logger logger = Logger
+	private final static Logger logger = LoggerFactory
 			.getLogger(HandleRemoteCamFetch.class);
 	private final SbtsDeviceConfig sbtsConfig;
 	private final VideoType videoType;

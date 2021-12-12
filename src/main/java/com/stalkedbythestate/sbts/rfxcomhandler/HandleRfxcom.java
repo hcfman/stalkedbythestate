@@ -6,10 +6,11 @@ import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HandleRfxcom implements Runnable {
-	private static final Logger logger = Logger.getLogger(HandleRfxcom.class);
+	private static final Logger logger = LoggerFactory.getLogger(HandleRfxcom.class);
 	private Event event;
 	private Event originalEvent;
 	private Action action;

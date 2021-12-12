@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.sbtsdevice.config;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -12,7 +13,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class CameraConfig {
-	private static final Logger logger = Logger.getLogger(CameraConfig.class);
+	private static final Logger logger = LoggerFactory.getLogger(CameraConfig.class);
 	private volatile Map<Integer, CameraDevice> cameraDevices = new TreeMap<Integer, CameraDevice>();
 	private volatile SortedSet<Integer> cameraOrder = new TreeSet<Integer>();
 

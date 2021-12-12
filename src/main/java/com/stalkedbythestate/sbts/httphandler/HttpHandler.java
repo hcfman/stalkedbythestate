@@ -9,14 +9,15 @@ import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.HttpActionImpl;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class HttpHandler {
-	private static final Logger logger = Logger.getLogger(HttpHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(HttpHandler.class);
 	FreakApi freak;
 	LinkedBlockingQueue<Event> eventQueue;
 	SbtsDeviceConfig sbtsConfig;

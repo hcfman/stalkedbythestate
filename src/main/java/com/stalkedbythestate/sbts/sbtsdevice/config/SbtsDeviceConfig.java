@@ -7,7 +7,8 @@ import com.stalkedbythestate.sbts.rfxcomlib.RfxcomOperator;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomType;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.*;
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -29,7 +30,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class SbtsDeviceConfig {
-	private static final Logger logger = Logger.getLogger(SbtsDeviceConfig.class);
+	private static final Logger logger = LoggerFactory.getLogger(SbtsDeviceConfig.class);
 	private final String DEFAULT_VERSION = "1.0";
 	private String version = DEFAULT_VERSION;
 	private volatile ProfileConfig profileConfig = new ProfileConfig();

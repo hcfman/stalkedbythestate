@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.streamer;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.json.NetworkJSON;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -28,8 +29,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class TomcatSettings {
-	private static final Logger logger = Logger.getLogger(TomcatSettings.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(TomcatSettings.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 
 	public NetworkJSON getSettings() throws Exception {
 		NetworkJSON networkJSON = new NetworkJSON();

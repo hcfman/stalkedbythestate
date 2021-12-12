@@ -3,9 +3,10 @@ package com.stalkedbythestate.sbts.streamer;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.CertTools;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.security.KeyStore;
@@ -22,8 +23,8 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 public class CertInstaller {
-	static final Logger logger = Logger.getLogger(CertInstaller.class);
-	static final Logger oplogger = Logger.getLogger("operations");
+	static final Logger logger = LoggerFactory.getLogger(CertInstaller.class);
+	static final Logger oplogger = LoggerFactory.getLogger("operations");
 	private FreakApi freak;
 	
 	// true if inserting into the keyStore otherwise we wish to insert into the truststore

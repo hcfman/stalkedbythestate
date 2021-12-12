@@ -5,10 +5,11 @@ package com.stalkedbythestate.sbts.json;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomCommand;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomOperator;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomType;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RfxcomCommandJSON {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(RfxcomCommandJSON.class);
 	private String name;
 	private String description;

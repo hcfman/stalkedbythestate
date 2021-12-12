@@ -5,7 +5,8 @@ package com.stalkedbythestate.sbts.streamer;
 import com.stalkedbythestate.sbts.eventlib.*;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -24,7 +25,7 @@ import java.util.regex.Pattern;
 
 @Component
 public class EventStreamer extends TextWebSocketHandler {
-    private static final Logger logger = Logger.getLogger(EventStreamer.class);
+    private static final Logger logger = LoggerFactory.getLogger(EventStreamer.class);
     private List<WebSocketSession> sessions = new CopyOnWriteArrayList<WebSocketSession>();
     private Map<WebSocketSession, SocketEventListener> sessionMap = new ConcurrentHashMap<WebSocketSession, SocketEventListener>();
     private FreakApi freak = null;

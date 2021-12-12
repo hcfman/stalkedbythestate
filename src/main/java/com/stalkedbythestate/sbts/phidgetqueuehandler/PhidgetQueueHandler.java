@@ -8,10 +8,11 @@ import com.stalkedbythestate.sbts.eventlib.SendActionEvent;
 import com.stalkedbythestate.sbts.eventlib.ShutdownEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.config.PhidgetDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.PhidgetActionImpl;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +21,7 @@ import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class PhidgetQueueHandler {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(PhidgetQueueHandler.class);
 	private FreakApi freak;
 	private LinkedBlockingQueue<Event> eventQueue;

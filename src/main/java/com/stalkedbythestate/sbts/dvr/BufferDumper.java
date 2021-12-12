@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.dvr;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 public class BufferDumper {
 	private FreakApi freak;
-	static final Logger logger = Logger.getLogger(BufferDumper.class);
+	static final Logger logger = LoggerFactory.getLogger(BufferDumper.class);
 
 	public BufferDumper(FreakApi freak) {
 		this.freak = freak;

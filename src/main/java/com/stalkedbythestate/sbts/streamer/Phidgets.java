@@ -4,16 +4,17 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.PhidgetDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.PhidgetConstants;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.PhidgetDeviceImpl;
 import com.stalkedbythestate.sbts.eventlib.ConfigureEvent;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.PhidgetJSON;
 import com.stalkedbythestate.sbts.json.ResultMessage;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.PhidgetDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.PhidgetConstants;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.PhidgetDeviceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,7 +29,7 @@ import java.util.Map;
 @WebServlet(urlPatterns={"/phidgets"})
 public class Phidgets extends HttpServlet {
 	private static final long serialVersionUID = 9148081148821038145L;
-	private static final Logger logger = Logger.getLogger(Phidgets.class);
+	private static final Logger logger = LoggerFactory.getLogger(Phidgets.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

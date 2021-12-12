@@ -5,7 +5,7 @@ package com.stalkedbythestate.sbts.streamer;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,10 +15,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Slf4j
 @WebServlet(urlPatterns={"/pview"})
 public class Pview extends HttpServlet {
 	private static final long serialVersionUID = 461336533960384294L;
-	private static final Logger logger = Logger.getLogger(Pview.class);
+//	private static final Logger log = Logger.getLogger(Pview.class);
 	SbtsDeviceConfig sbtsConfig;
 	FreakApi freak;
 

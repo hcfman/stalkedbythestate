@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.freakutils;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +12,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class ScriptRunner {
-	private static final Logger logger = Logger.getLogger(ScriptRunner.class);
+	private static final Logger logger = LoggerFactory.getLogger(ScriptRunner.class);
 
 	public ScriptRunnerResult spawn(String... command) {
 		if (logger.isDebugEnabled())

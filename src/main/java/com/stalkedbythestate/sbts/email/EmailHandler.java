@@ -3,13 +3,14 @@ package com.stalkedbythestate.sbts.email;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.eventlib.Event;
-import com.stalkedbythestate.sbts.eventlib.SendActionEvent;
-import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.EmailActionImpl;
 import com.stalkedbythestate.sbts.eventlib.EventType;
+import com.stalkedbythestate.sbts.eventlib.SendActionEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
+import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.EmailActionImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +21,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class EmailHandler {
-	private static final Logger logger = Logger.getLogger(EmailHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(EmailHandler.class);
 	private FreakApi freak;
 	private LinkedBlockingQueue<Event> eventQueue;
 	private SbtsDeviceConfig sbtsConfig;

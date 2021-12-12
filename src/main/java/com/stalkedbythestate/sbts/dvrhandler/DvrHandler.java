@@ -10,7 +10,8 @@ import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.config.DiskState;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoActionImpl;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +21,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class DvrHandler {
-	private static final Logger logger = Logger.getLogger(DvrHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(DvrHandler.class);
 	private final FreakApi freak;
 	private final LinkedBlockingQueue<Event> eventQueue;
 	private AtomicBoolean ready = new AtomicBoolean(false);
@@ -33,8 +34,6 @@ public class DvrHandler {
 	}
 
 	public final void start() {
-		logger.info("DVR HANDLER STARTUP");
-
 		handle();
 	}
 

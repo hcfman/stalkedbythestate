@@ -2,14 +2,15 @@ package com.stalkedbythestate.sbts.eventlib;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 
 public class HttpAuthenticator extends Authenticator {
 	private static HttpAuthenticator instance = null;
-	private static final Logger logger = Logger.getLogger(HttpAuthenticator.class);
+	private static final Logger logger = LoggerFactory.getLogger(HttpAuthenticator.class);
 	private ThreadLocal<String> username = new ThreadLocal<String>();
 	private ThreadLocal<String> password = new ThreadLocal<String>();
 

@@ -7,7 +7,8 @@ import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.*;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.*;
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -17,9 +18,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EventHandler {
-	private static final Logger logger = Logger.getLogger(EventHandler.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
-	private static final Logger actionLogger = Logger.getLogger("action");
+	private static final Logger logger = LoggerFactory.getLogger(EventHandler.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
+	private static final Logger actionLogger = LoggerFactory.getLogger("action");
 	private final FreakApi freak;
 	private final LinkedBlockingQueue<Event> ehEventQueue;
 	private volatile Boolean ready = false;
@@ -288,7 +289,6 @@ public class EventHandler {
 
 	public final void start() {
 		resubscribeToCombinationEvents();
-		logger.info("EVENT HANDLER STARTUP");
 
 		if (logger.isDebugEnabled())
 			logger.debug("About to handle");

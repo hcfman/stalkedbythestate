@@ -4,14 +4,15 @@ package com.stalkedbythestate.sbts.json;
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.security.KeyStore;
 
 public class CertTools {
-	static final Logger logger = Logger.getLogger(CertTools.class);
+	static final Logger logger = LoggerFactory.getLogger(CertTools.class);
 	private FreakApi freak;
 	
 	public CertTools(FreakApi freak) {

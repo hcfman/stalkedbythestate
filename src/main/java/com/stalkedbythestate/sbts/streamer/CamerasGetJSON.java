@@ -4,13 +4,14 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.CameraJSON;
 import com.stalkedbythestate.sbts.json.CamerasJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +26,7 @@ import java.util.TreeMap;
 @WebServlet(urlPatterns={"/camerasgetjson"})
 public class CamerasGetJSON extends HttpServlet {
 	private static final long serialVersionUID = 8835361381758906332L;
-	private static final Logger logger = Logger.getLogger(CamerasGetJSON.class);
+	private static final Logger logger = LoggerFactory.getLogger(CamerasGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	FreakApi freak;
 

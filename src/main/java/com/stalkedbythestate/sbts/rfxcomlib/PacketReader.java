@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.rfxcomlib;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,8 +14,8 @@ import java.util.Set;
 import java.util.concurrent.*;
 
 public class PacketReader {
-	private static final Logger logger = Logger.getLogger(PacketReader.class);
-	private static final Logger rfxcomLogger = Logger.getLogger("rfxcom");
+	private static final Logger logger = LoggerFactory.getLogger(PacketReader.class);
+	private static final Logger rfxcomLogger = LoggerFactory.getLogger("rfxcom");
 	private FileInputStream fis;
 	private FileOutputStream fos;
 	private int globalOffset;

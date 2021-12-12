@@ -4,7 +4,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.stalkedbythestate.sbts.json.UserJSON;
 import com.stalkedbythestate.sbts.json.UsersJSON;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -32,8 +33,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ParseUsers {
-	private static final Logger logger = Logger.getLogger(ParseUsers.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(ParseUsers.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	
 	public UsersJSON parse() throws XPathExpressionException, IOException, SAXException, ParserConfigurationException {
 		UsersJSON usersJSON = new UsersJSON(true);

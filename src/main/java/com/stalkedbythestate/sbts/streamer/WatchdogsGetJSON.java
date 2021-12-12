@@ -4,13 +4,14 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.Watchdog;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.WatchdogJSON;
 import com.stalkedbythestate.sbts.json.WatchdogsJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.config.Watchdog;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +28,7 @@ import java.util.TreeSet;
 @WebServlet(urlPatterns={"/watchdogsgetjson"})
 public class WatchdogsGetJSON extends HttpServlet {
 	private static final long serialVersionUID = 3157799115732191678L;
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(WatchdogsGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;

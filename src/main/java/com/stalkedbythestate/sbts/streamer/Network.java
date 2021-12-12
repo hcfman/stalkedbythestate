@@ -5,13 +5,12 @@ package com.stalkedbythestate.sbts.streamer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stalkedbythestate.sbts.freak.Freak;
-import com.stalkedbythestate.sbts.freakutils.ScriptRunner;
-import com.stalkedbythestate.sbts.freakutils.ScriptRunnerResult;
+import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.json.NetworkJSON;
 import com.stalkedbythestate.sbts.json.ResultMessage;
-import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.RequestDispatcher;
@@ -25,8 +24,8 @@ import java.io.*;
 @WebServlet(urlPatterns={"/network"})
 public class Network extends HttpServlet {
 	private static final long serialVersionUID = -1677036780021357071L;
-	private static final Logger logger = Logger.getLogger(Network.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Network.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

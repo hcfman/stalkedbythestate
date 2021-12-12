@@ -7,10 +7,11 @@ import com.google.gson.GsonBuilder;
 import com.stalkedbythestate.sbts.eventlib.ConfigureVideoEvent;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.PreferencesJSON;
 import com.stalkedbythestate.sbts.json.ResultMessage;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,8 +23,8 @@ import java.io.*;
 @WebServlet(urlPatterns={"/preferences"})
 public class Preferences extends HttpServlet {
 	private static final long serialVersionUID = -4525671991027438195L;
-	private static final Logger logger = Logger.getLogger(Preferences.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Preferences.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

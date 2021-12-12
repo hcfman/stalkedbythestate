@@ -6,9 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.LogJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,8 +20,6 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns={"/systemloggetjson"})
 public class SystemLogGetJSON extends HttpServlet {
 	private static final long serialVersionUID = -8629726494228125487L;
-	private static final Logger logger = Logger
-			.getLogger(SystemLogGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

@@ -4,15 +4,16 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.FreakDeviceImpl;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.ProtocolType;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.FreakJSON;
 import com.stalkedbythestate.sbts.json.ResultMessage;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.FreakDeviceImpl;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.ProtocolType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,8 +28,8 @@ import java.util.Map;
 @WebServlet(urlPatterns={"/freaks"})
 public class Freaks extends HttpServlet {
 	private static final long serialVersionUID = 6852554347950656349L;
-	private static final Logger logger = Logger.getLogger(Freaks.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Freaks.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

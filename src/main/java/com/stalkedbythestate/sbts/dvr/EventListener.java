@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.dvr;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EventListener implements Runnable {
-	static final Logger logger = Logger.getLogger(EventListener.class);
+	static final Logger logger = LoggerFactory.getLogger(EventListener.class);
 	ConcurrentHashMap<String, LinkedBlockingQueue<Request>> cameraEventQueues;
 	CameraList cameraList;
 

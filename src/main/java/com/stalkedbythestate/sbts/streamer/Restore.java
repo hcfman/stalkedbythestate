@@ -8,7 +8,8 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.RequestDispatcher;
@@ -24,8 +25,8 @@ import java.util.List;
 @WebServlet(urlPatterns={"/restore"})
 public class Restore extends HttpServlet {
 	private static final long serialVersionUID = 1126998332711645868L;
-	private static final Logger logger = Logger.getLogger(Restore.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Restore.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private FreakApi freak;
 
 	@Override

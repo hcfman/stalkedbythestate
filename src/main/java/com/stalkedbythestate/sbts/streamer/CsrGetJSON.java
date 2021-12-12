@@ -6,10 +6,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.CertTools;
 import com.stalkedbythestate.sbts.json.CsrJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateHolder;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
@@ -20,6 +19,8 @@ import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 import org.bouncycastle.pkcs.PKCS10CertificationRequest;
 import org.bouncycastle.pkcs.PKCS10CertificationRequestBuilder;
 import org.bouncycastle.pkcs.jcajce.JcaPKCS10CertificationRequestBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +40,7 @@ import java.util.Base64;
 @WebServlet(urlPatterns={"/csrgetjson"})
 public class CsrGetJSON extends HttpServlet {
 	private static final long serialVersionUID = 352453434439740449L;
-	private static final Logger logger = Logger.getLogger(CsrGetJSON.class);
+	private static final Logger logger = LoggerFactory.getLogger(CsrGetJSON.class);
 	private FreakApi freak;
 
 	@Override

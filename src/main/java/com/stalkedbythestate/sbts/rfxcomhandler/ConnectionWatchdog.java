@@ -6,7 +6,8 @@ import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.freakutils.ScriptRunner;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.concurrent.Executor;
@@ -14,10 +15,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class ConnectionWatchdog implements Runnable {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(ConnectionWatchdog.class);
-	private static final Logger rfxcomLogger = Logger.getLogger("rfxcom");
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger rfxcomLogger = LoggerFactory.getLogger("rfxcom");
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private final int RETRY_TIME = 2000;
 	private final LinkedBlockingQueue<Event> watchdogQueue;
 	private FileInputStream fis = null;

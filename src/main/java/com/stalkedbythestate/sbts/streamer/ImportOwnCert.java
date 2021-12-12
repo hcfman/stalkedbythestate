@@ -6,9 +6,10 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.ImportCertJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -21,7 +22,7 @@ import java.io.*;
 @WebServlet(urlPatterns={"/importowncert"})
 public class ImportOwnCert extends HttpServlet {
 	private static final long serialVersionUID = 8861691397300071567L;
-	private static final Logger logger = Logger.getLogger(ImportOwnCert.class);
+	private static final Logger logger = LoggerFactory.getLogger(ImportOwnCert.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

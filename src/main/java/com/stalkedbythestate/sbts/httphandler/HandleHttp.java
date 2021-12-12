@@ -11,7 +11,8 @@ import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.HttpActionImpl;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.MethodType;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.DataOutputStream;
@@ -22,8 +23,8 @@ import java.net.*;
 import java.util.Map;
 
 public class HandleHttp implements Runnable {
-	private static final Logger logger = Logger.getLogger(HandleHttp.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(HandleHttp.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private Event event;
 	private Event originalEvent;
 	private Action action;

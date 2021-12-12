@@ -1,4 +1,4 @@
-<%@ page import="java.util.HashMap,com.stalkedbythestate.sbts.json.ViewJSON,com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType,java.util.TreeMap,org.apache.log4j.Logger,java.util.List,java.util.Map,java.util.SortedSet,java.util.Date,java.text.SimpleDateFormat,com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice" %>
+<%@ page import="java.util.HashMap,com.stalkedbythestate.sbts.json.ViewJSON,com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType,java.util.TreeMap,java.util.List,java.util.Map,java.util.SortedSet,java.util.Date,java.text.SimpleDateFormat,com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -22,7 +22,6 @@ Map<Long, String> eventDescMap = (Map<Long,String>) request.getAttribute("eventD
 Map<Integer, CameraDevice> cameraDevices = (Map<Integer, CameraDevice>) request.getAttribute("cameras");
 SortedSet<Integer> sortOrder = (SortedSet<Integer>) request.getAttribute("sortedSet");
 TreeMap<Long, boolean[]> eventMap = (TreeMap<Long, boolean[]>) request.getAttribute("eventMap");
-Logger logger = (Logger) request.getAttribute("logger");
 Integer actualSize = (Integer) request.getAttribute("actualSize");
 ViewJSON viewJSON = (ViewJSON) request.getAttribute("viewJSON");
 VideoType videoType = (VideoType) request.getAttribute("videoType");
@@ -127,13 +126,10 @@ for (String webPrefix : viewJSON.getWebPrefixes()) {
 				<%
 				if (sortOrder.size() > 0) {
 					int lastIndex = sortOrder.last();
-					logger.debug("actualSize: " + actualSize);
 					for (int camIndex = 0; camIndex < actualSize; camIndex++) {
 						CameraDevice cameraDevice = cameraDevices.get(viewJSON.getOffsetMapping()[camIndex]);
 				%>
-						<td><% logger.debug("camIndex: " + camIndex);
-						logger.debug("eventValue: " + eventValue);
-						logger.debug("eventMap: " + eventMap.get(eventValue));
+						<td><%
 						if (!eventMap.get(eventValue)[camIndex]) {
 						%>&nbsp;<%
 						} else {

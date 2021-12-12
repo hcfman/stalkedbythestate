@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.SpringConfiguration;
 // Copyright (c) 2021 Kim Hendrikse
 
 import org.apache.catalina.core.Constants;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,7 +16,7 @@ import java.util.stream.Stream;
 
 @Configuration
 public class ConfigureWeb implements ServletContextInitializer {
-    private static final Logger logger = Logger.getLogger(ConfigureWeb.class);
+    private static final Logger logger = LoggerFactory.getLogger(ConfigureWeb.class);
 
 
     @Override

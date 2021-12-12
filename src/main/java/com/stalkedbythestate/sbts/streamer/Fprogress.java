@@ -4,11 +4,12 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.Progress;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
+import com.stalkedbythestate.sbts.sbtsdevice.config.Progress;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,8 +24,8 @@ import java.util.concurrent.TimeUnit;
 @WebServlet(urlPatterns={"/fprogress"})
 public class Fprogress extends HttpServlet {
 	private static final long serialVersionUID = 7193793621566941840L;
-	private static final Logger logger = Logger.getLogger(Fprogress.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Fprogress.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

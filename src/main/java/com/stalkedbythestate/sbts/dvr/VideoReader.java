@@ -9,7 +9,8 @@ import com.stalkedbythestate.sbts.eventlib.VideoTriggerEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -21,8 +22,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class VideoReader {
-	private static final Logger logger = Logger.getLogger(VideoReader.class);
-	private static final Logger oplogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(VideoReader.class);
+	private static final Logger oplogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 
 	private final FreakApi freak;

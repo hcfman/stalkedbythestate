@@ -4,7 +4,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ import java.util.List;
 @WebServlet(urlPatterns={"/backup"})
 public class Backup extends HttpServlet {
 	private static final long serialVersionUID = 4826751111201461423L;
-	private static final Logger logger = Logger.getLogger(Backup.class);
+	private static final Logger logger = LoggerFactory.getLogger(Backup.class);
 	private FreakApi freak;
 
 	@Override

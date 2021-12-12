@@ -4,14 +4,15 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.Schedule;
 import com.stalkedbythestate.sbts.eventlib.ConfigureScheduleEvent;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.ResultMessage;
 import com.stalkedbythestate.sbts.json.ScheduleJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.config.Schedule;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,7 +26,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns={"/schedules"})
 public class Schedules extends HttpServlet {
-	private static final Logger logger = Logger.getLogger(Schedules.class);
+	private static final Logger logger = LoggerFactory.getLogger(Schedules.class);
 	private static final long serialVersionUID = -5956670942335268988L;
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;

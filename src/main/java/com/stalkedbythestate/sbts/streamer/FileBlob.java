@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FileBlob {
-	private static final Logger logger = Logger.getLogger(FileBlob.class);
+	private static final Logger logger = LoggerFactory.getLogger(FileBlob.class);
 	private static final int BUFFERSIZE = 1024;
 	
 	public String getBlob(String filename) throws Exception {

@@ -8,7 +8,8 @@ import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.json.*;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -27,7 +28,7 @@ import java.util.*;
 @WebServlet(urlPatterns = {"/certificatesgetjson"})
 public class CertificatesGetJSON extends HttpServlet {
     private static final long serialVersionUID = -2277729964948177781L;
-    private static final Logger logger = Logger
+    private static final Logger logger = LoggerFactory
             .getLogger(CertificatesGetJSON.class);
     private SbtsDeviceConfig sbtsConfig;
     FreakApi freak;

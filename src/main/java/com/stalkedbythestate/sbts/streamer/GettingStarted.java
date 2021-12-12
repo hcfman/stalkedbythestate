@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,8 +16,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns={"/gettingstarted"})
 public class GettingStarted extends HttpServlet {
 	private static final long serialVersionUID = -8693038085071155968L;
-	private static final Logger logger = Logger.getLogger(GettingStarted.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(GettingStarted.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 //	private SbtsDeviceConfig sbtsConfig;
 //	private FreakApi freak;
 

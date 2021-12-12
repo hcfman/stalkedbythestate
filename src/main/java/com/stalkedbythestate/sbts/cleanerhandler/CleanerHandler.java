@@ -6,7 +6,8 @@ import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.DiskState;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +20,7 @@ import java.util.TimerTask;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class CleanerHandler {
-	private static final Logger logger = Logger.getLogger(CleanerHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(CleanerHandler.class);
 	private FreakApi freak;
 	private LinkedBlockingQueue<Event> eventQueue;
 	private SbtsDeviceConfig sbtsConfig;

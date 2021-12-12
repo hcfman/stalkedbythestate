@@ -4,7 +4,8 @@ package com.stalkedbythestate.sbts.rfxcomhandler;
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.rfxcomlib.*;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,9 +18,9 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class RfxcomController {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(RfxcomController.class);
-	private static final Logger rfxcomLogger = Logger.getLogger("rfxcom");
+	private static final Logger rfxcomLogger = LoggerFactory.getLogger("rfxcom");
 	private volatile Set<RfxComListener> eventSet = new HashSet<RfxComListener>();
 	private Map<String, Long> lastTriggeredMap = new HashMap<String, Long>();
 	private SystemStatusListener statusListener;

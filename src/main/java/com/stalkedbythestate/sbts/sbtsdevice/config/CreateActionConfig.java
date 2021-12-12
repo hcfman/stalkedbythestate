@@ -4,14 +4,15 @@ package com.stalkedbythestate.sbts.sbtsdevice.config;
 
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.*;
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import java.util.*;
 
 public class CreateActionConfig {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(CreateActionConfig.class);
 
 	private static Element createCameraList(Document doc,

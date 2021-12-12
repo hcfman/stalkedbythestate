@@ -5,14 +5,15 @@ package com.stalkedbythestate.sbts.diskwatchdog;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.DiskState;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
 public class DiskWatchdogHandler {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(DiskWatchdogHandler.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private static final long MOUNT_RETRY_TIME = 10000;
 	private volatile boolean formatting = false;
 	private SbtsDeviceConfig sbtsConfig;
@@ -55,7 +56,6 @@ public class DiskWatchdogHandler {
 
 	public final void start(FreakApi freak) {
 		this.freak = freak;
-		logger.info("DVR HANDLER STARTUP");
 
 		handle();
 	}

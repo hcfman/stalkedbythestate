@@ -4,7 +4,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.stalkedbythestate.sbts.json.CertificateJSON;
 import com.stalkedbythestate.sbts.json.Dn;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.security.MessageDigest;
 import java.security.cert.Certificate;
@@ -12,7 +13,7 @@ import java.security.cert.X509Certificate;
 import java.security.interfaces.RSAPublicKey;
 
 public final class CertificateJSONbuilder {
-    private static final Logger logger = Logger
+    private static final Logger logger = LoggerFactory
             .getLogger(CertificatesGetJSON.class);
 
     private void byte2hex(byte b, StringBuffer buf) {

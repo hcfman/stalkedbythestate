@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +16,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns={"/mvc"})
 public class Mvc extends HttpServlet {
 	private static final long serialVersionUID = 8379886242412427110L;
-	private static final Logger logger = Logger.getLogger(Mvc.class);
+	private static final Logger logger = LoggerFactory.getLogger(Mvc.class);
 
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {

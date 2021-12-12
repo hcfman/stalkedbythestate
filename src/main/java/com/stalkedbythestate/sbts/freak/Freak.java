@@ -20,7 +20,8 @@ import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SettingsConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.HttpActionImpl;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.MethodType;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -35,8 +36,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 
 public class Freak implements FreakApi {
-	private static final Logger logger = Logger.getLogger(Freak.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Freak.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private static Freak freak;
 	private final String SBTS_BASE = System.getenv("SBTS_HOME");
 	private static volatile SbtsDeviceConfig sbtsConfig;

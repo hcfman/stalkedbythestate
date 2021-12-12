@@ -6,12 +6,13 @@ import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.eventlib.EventType;
 import com.stalkedbythestate.sbts.eventlib.SendActionEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
+import com.stalkedbythestate.sbts.rfxcomlib.RfxcomCommand;
+import com.stalkedbythestate.sbts.rfxcomlib.RfxcomType;
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.RfxcomActionImpl;
-import com.stalkedbythestate.sbts.rfxcomlib.RfxcomCommand;
-import com.stalkedbythestate.sbts.rfxcomlib.RfxcomType;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.concurrent.Executor;
@@ -19,9 +20,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class RfxcomHandler {
-	private static final Logger logger = Logger.getLogger(RfxcomHandler.class);
-	private static final Logger rfxcomLogger = Logger.getLogger("rfxcom");
-	private static final Logger oplogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(RfxcomHandler.class);
+	private static final Logger rfxcomLogger = LoggerFactory.getLogger("rfxcom");
+	private static final Logger oplogger = LoggerFactory.getLogger("operations");
 	private FreakApi freak;
 	private LinkedBlockingQueue<Event> rfxcomEventQueue;
 	private LinkedBlockingQueue<Event> watchdogQueue = new LinkedBlockingQueue<Event>();

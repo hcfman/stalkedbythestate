@@ -4,12 +4,13 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.ViewJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +22,7 @@ import java.util.*;
 
 public class ListJSON implements Serializable {
 	private static final long serialVersionUID = 318925483924212254L;
-	private static final Logger logger = Logger.getLogger(ListJSON.class);
+	private static final Logger logger = LoggerFactory.getLogger(ListJSON.class);
 	private Map<Integer, CameraDevice> cameraDevices;
 	private SortedSet<Integer> cameraSet;
 	private List<String> eventFilterList;

@@ -8,13 +8,14 @@ import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.json.*;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
 import org.bouncycastle.cert.X509CertificateHolder;
 import org.bouncycastle.cert.X509v1CertificateBuilder;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
 import org.bouncycastle.cert.jcajce.JcaX509v1CertificateBuilder;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -34,7 +35,7 @@ import java.util.Date;
 @WebServlet(urlPatterns={"/gencert"})
 public class GenCert extends HttpServlet {
 	private static final long serialVersionUID = 1820179491456040451L;
-	private static final Logger logger = Logger.getLogger(GenCert.class);
+	private static final Logger logger = LoggerFactory.getLogger(GenCert.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

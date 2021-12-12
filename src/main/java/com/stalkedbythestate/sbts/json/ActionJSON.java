@@ -5,12 +5,13 @@ package com.stalkedbythestate.sbts.json;
 import com.stalkedbythestate.sbts.sbtsdevice.config.*;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.*;
 import com.stalkedbythestate.sbts.timeRanges.TimeSpec;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
 public class ActionJSON {
-	private static final Logger logger = Logger.getLogger(ActionJSON.class);
+	private static final Logger log = LoggerFactory.getLogger(ActionJSON.class);
 	private String name;
 	private String eventName;
 	private String description;
@@ -351,7 +352,7 @@ public class ActionJSON {
 	}
 
 	public ActionType getActionTypeValue() {
-		if (logger.isDebugEnabled()) logger.debug("Want to do getActionTypeValue for : " + actionType);
+		if (log.isDebugEnabled()) log.debug("Want to do getActionTypeValue for : " + actionType);
 		ActionType returnActionType = null;
 		if (actionType.equals("ACTION_VIDEO"))
 			returnActionType = ActionType.ACTION_VIDEO;
@@ -380,9 +381,9 @@ public class ActionJSON {
 		Action action = null;
 		VideoType vType = null;
 
-		if (logger.isDebugEnabled()) logger.debug("In toAction: actionType: " + actionType);
+		if (log.isDebugEnabled()) log.debug("In toAction: actionType: " + actionType);
 		actionType = ("ACTION_" + actionType).replaceAll(" ", "_");
-		if (logger.isDebugEnabled()) logger.debug("Convert ActionJSON to Action: " + toString());
+		if (log.isDebugEnabled()) log.debug("Convert ActionJSON to Action: " + toString());
 
 		ActionType actionType = getActionTypeValue();
 		switch (actionType) {
@@ -477,12 +478,12 @@ public class ActionJSON {
 		
 		action.setGuest(isGuest());
 		
-		if (logger.isDebugEnabled()) logger.debug("Action name: " + getName());
+		if (log.isDebugEnabled()) log.debug("Action name: " + getName());
 		if (getValidTimes() != null) {
-			if (logger.isDebugEnabled()) logger.debug("There are validTimes");
+			if (log.isDebugEnabled()) log.debug("There are validTimes");
 			action.setValidTimes(getValidTimes());
 		} else {
-			if (logger.isDebugEnabled()) logger.debug("There are no validTimes");
+			if (log.isDebugEnabled()) log.debug("There are no validTimes");
 		}
 		
 		if (getProfiles() != null)
@@ -494,7 +495,7 @@ public class ActionJSON {
 		try {
 			andModeBoolean = Boolean.parseBoolean(andMode);
 		} catch (Exception e) {
-			logger.error("Can't parse andMode string to boolean");
+			log.error("Can't parse andMode string to boolean");
 		}
 		action.setPositiveTagAndMode(andModeBoolean);
 		

@@ -2,10 +2,11 @@ package com.stalkedbythestate.sbts.sbtsdevice.configimpl;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ValidityChecks {
-	private static final Logger logger = Logger.getLogger(ValidityChecks.class);
+	private static final Logger logger = LoggerFactory.getLogger(ValidityChecks.class);
 	
 	public static boolean isEventNameValid(String eventName) {
 		if (logger.isDebugEnabled()) logger.debug("eventName = \"" + eventName + "\", regexp: " + "^[\\s0-9a-zA-Z_\\-\\.]*$");

@@ -3,12 +3,13 @@ package com.stalkedbythestate.sbts.streamer;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.CertTools;
 import com.stalkedbythestate.sbts.json.CsrJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.openssl.jcajce.JcaPEMWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -18,7 +19,7 @@ import java.security.Security;
 import java.security.cert.X509Certificate;
 
 public class ExportCert {
-	private static final Logger logger = Logger.getLogger(ExportCert.class);
+	private static final Logger logger = LoggerFactory.getLogger(ExportCert.class);
 	private FreakApi freak;
 
 	public ExportCert(FreakApi freak) {

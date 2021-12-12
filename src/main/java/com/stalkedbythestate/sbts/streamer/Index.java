@@ -2,7 +2,8 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +16,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns={"/index"})
 public class Index extends HttpServlet {
 	private static final long serialVersionUID = -511390954168971595L;
-	private static final Logger logger = Logger.getLogger(Index.class);
+	private static final Logger logger = LoggerFactory.getLogger(Index.class);
 
 	
 	public void init() throws ServletException {

@@ -14,7 +14,8 @@ import com.stalkedbythestate.sbts.sbtsdevice.config.ActionType;
 import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.*;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -31,7 +32,7 @@ import java.util.concurrent.Executors;
 @WebServlet(urlPatterns={"/actionsgetjson"})
 public class ActionsGetJSON extends HttpServlet {
 	private static final long serialVersionUID = -3413744800842427186L;
-	private static final Logger logger = Logger.getLogger(ActionsGetJSON.class);
+	private static final Logger logger = LoggerFactory.getLogger(ActionsGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private List<RemoteFreakSpec> remoteFreakSpecList;
 	private FreakApi freak;

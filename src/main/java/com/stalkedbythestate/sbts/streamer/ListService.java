@@ -2,11 +2,12 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.json.ViewJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,7 +19,7 @@ import java.util.*;
 
 public class ListService implements Serializable {
 	private static final long serialVersionUID = -6872207630519445402L;
-	private static final Logger logger = Logger.getLogger(ListService.class);
+	private static final Logger logger = LoggerFactory.getLogger(ListService.class);
 	
 	protected void service(FreakApi freak, VideoType videoType, HttpServletRequest request,
                            HttpServletResponse response) throws ServletException, IOException {

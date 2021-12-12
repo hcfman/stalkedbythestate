@@ -4,15 +4,16 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.TagActionImpl;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.ActionType;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.TagButton;
 import com.stalkedbythestate.sbts.json.TagButtonsJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
+import com.stalkedbythestate.sbts.sbtsdevice.config.ActionType;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.TagActionImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +28,7 @@ import java.util.TreeMap;
 @WebServlet(urlPatterns={"/tagbuttonsgetjson"})
 public class TagButtonsGetJSON extends HttpServlet {
 	private static final long serialVersionUID = 483239419320902596L;
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(TagButtonsGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;

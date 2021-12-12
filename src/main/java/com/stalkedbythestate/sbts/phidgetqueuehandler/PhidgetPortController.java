@@ -2,6 +2,8 @@ package com.stalkedbythestate.sbts.phidgetqueuehandler;
 
 // Copyright (c) 2021 Kim Hendrikse
 
+import com.phidget22.DigitalOutput;
+import com.phidget22.PhidgetException;
 import com.stalkedbythestate.sbts.eventlib.Event;
 import com.stalkedbythestate.sbts.eventlib.EventType;
 import com.stalkedbythestate.sbts.eventlib.SendActionEvent;
@@ -9,17 +11,16 @@ import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.Action;
 import com.stalkedbythestate.sbts.sbtsdevice.config.PhidgetDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.PhidgetActionImpl;
-import com.phidget22.DigitalOutput;
-import com.phidget22.PhidgetException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class PhidgetPortController implements Runnable {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(PhidgetPortController.class);
-	private static final Logger phidgetLogger = Logger.getLogger("phidget");
+	private static final Logger phidgetLogger = LoggerFactory.getLogger("phidget");
 	private FreakApi freak;
 	private LinkedBlockingQueue<Event> eventQueue;
 	private PhidgetDevice phidgetDevice;

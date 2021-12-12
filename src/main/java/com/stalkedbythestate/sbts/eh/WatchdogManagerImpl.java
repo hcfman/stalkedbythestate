@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.eh;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.sbtsdevice.config.Watchdog;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -11,7 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class WatchdogManagerImpl implements WatchdogManager {
-	private static final Logger logger = Logger.getLogger(WatchdogManagerImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(WatchdogManagerImpl.class);
     private final Map<String, Set<Watchdog>> eventMap = new HashMap<>();
 	private final EventHandler eventHandler;
 

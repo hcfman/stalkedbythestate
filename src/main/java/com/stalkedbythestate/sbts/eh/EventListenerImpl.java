@@ -4,10 +4,11 @@ package com.stalkedbythestate.sbts.eh;
 
 import com.stalkedbythestate.sbts.eventlib.SyntheticTriggerEvent;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EventListenerImpl implements EventListener {
-	private static final Logger logger = Logger.getLogger(EventListenerImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(EventListenerImpl.class);
 	private FreakApi freak;
 
 	public EventListenerImpl(FreakApi freak) {

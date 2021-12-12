@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.dvr;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -12,7 +13,7 @@ import java.util.LinkedList;
 import java.util.Locale;
 
 public class CircularList {
-	private static final Logger logger = Logger.getLogger(CircularList.class);
+	private static final Logger logger = LoggerFactory.getLogger(CircularList.class);
 	private FreakApi freak;
 	private ImageBuffer list[];
 	int size, itemCount;

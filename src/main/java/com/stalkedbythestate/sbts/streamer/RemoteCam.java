@@ -2,13 +2,14 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.ValidityChecks;
 import com.stalkedbythestate.sbts.eventlib.RemoteCamTriggerEvent;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
+import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.ValidityChecks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -25,8 +26,8 @@ import java.util.TreeSet;
 @WebServlet(urlPatterns={"/remotecam", "/guest/remotecam"})
 public class RemoteCam extends HttpServlet {
 	private static final long serialVersionUID = -2384531361289352106L;
-	private static final Logger logger = Logger.getLogger(RemoteCam.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(RemoteCam.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 	private boolean guest;

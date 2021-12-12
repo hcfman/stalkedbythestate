@@ -3,7 +3,7 @@ package com.stalkedbythestate.sbts.dvr;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,9 +14,11 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Slf4j
+
 public class EventHeader {
-	static final Logger logger = Logger.getLogger(EventHeader.class);
-	private FreakApi freak;
+//	static final Logger log = Logger.getLogger(EventHeader.class);
+	private final FreakApi freak;
 	
 	private AtomicInteger lastFileWrittenAtomic = new AtomicInteger(0);
 	long eventTime;
@@ -26,7 +28,7 @@ public class EventHeader {
 	PrintWriter printWriter;
 	
 	String cam;
-	LinkedList<String> filelist = new LinkedList<String>();
+	LinkedList<String> filelist = new LinkedList<>();
 
 	EventHeader(FreakApi freak, String cam, long eventTime, String description) throws IOException {
 		this.freak = freak;
@@ -34,7 +36,7 @@ public class EventHeader {
 		this.eventTime = eventTime;
 		this.cam = cam;
 		
-		if (logger.isDebugEnabled()) logger.debug("EVENT HEADER: " + freak.getSbtsBase());
+		if (log.isDebugEnabled()) log.debug("EVENT HEADER: " + freak.getSbtsBase());
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = new Date(eventTime);
 		String dateString = dateFormat.format(d);
@@ -46,7 +48,7 @@ public class EventHeader {
 		File file = new File( eventDirname + "/" + eventTime );
 		printWriter = new PrintWriter( new FileOutputStream( file ));
 		printWriter.println( description );
-		logger.debug("Created print writer on " + file.toString() );
+		log.debug("Created print writer on " + file);
 
 		dirname = "dvr_images/" + cam + "/" + dateString + "/" + eventTime;
 		File dirFile = new File(freak.getSbtsBase() + "/disk/sbts/" + dirname);

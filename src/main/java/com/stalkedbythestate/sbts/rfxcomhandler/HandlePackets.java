@@ -2,14 +2,15 @@ package com.stalkedbythestate.sbts.rfxcomhandler;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class HandlePackets implements Runnable {
-	private static final Logger logger = Logger.getLogger(HandlePackets.class);
+	private static final Logger logger = LoggerFactory.getLogger(HandlePackets.class);
 	private FileInputStream fis;
 	private FileOutputStream fos;
 	private RfxcomController rfxcomController;

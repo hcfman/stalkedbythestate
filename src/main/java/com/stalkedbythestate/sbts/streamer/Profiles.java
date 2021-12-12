@@ -4,15 +4,16 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.Profile;
-import com.stalkedbythestate.sbts.sbtsdevice.config.ProfileConfig;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.ProfileImpl;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.ProfileJSON;
 import com.stalkedbythestate.sbts.json.ResultMessage;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.Profile;
+import com.stalkedbythestate.sbts.sbtsdevice.config.ProfileConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.ProfileImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,8 +26,8 @@ import java.io.*;
 @WebServlet(urlPatterns={"/profiles"})
 public class Profiles extends HttpServlet {
 	private static final long serialVersionUID = 1232096668177008738L;
-	private static final Logger logger = Logger.getLogger(Profiles.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Profiles.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

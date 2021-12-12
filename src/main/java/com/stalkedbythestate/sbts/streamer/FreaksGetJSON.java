@@ -4,13 +4,14 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.FreakJSON;
 import com.stalkedbythestate.sbts.json.FreaksJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +24,7 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns={"/freaksgetjson"})
 public class FreaksGetJSON extends HttpServlet {
 	private static final long serialVersionUID = 3003922593335993839L;
-	private static final Logger logger = Logger.getLogger(FreaksGetJSON.class);
+	private static final Logger logger = LoggerFactory.getLogger(FreaksGetJSON.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

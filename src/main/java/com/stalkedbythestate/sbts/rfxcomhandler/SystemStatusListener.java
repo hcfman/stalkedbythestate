@@ -4,10 +4,11 @@ package com.stalkedbythestate.sbts.rfxcomhandler;
 
 import com.stalkedbythestate.sbts.rfxcomlib.Packet;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomCommand;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SystemStatusListener extends RfxComListenerImpl {
-	private static final Logger rfxcomLogger = Logger.getLogger("rfxcom");
+	private static final Logger rfxcomLogger = LoggerFactory.getLogger("rfxcom");
 	private RfxcomController rfxcomController;
 
 	public SystemStatusListener(RfxcomController rfxcomController, RfxcomCommand command) {

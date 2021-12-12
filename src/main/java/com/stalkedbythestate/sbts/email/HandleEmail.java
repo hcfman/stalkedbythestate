@@ -10,7 +10,8 @@ import com.stalkedbythestate.sbts.sbtsdevice.configimpl.EmailActionImpl;
 import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -23,8 +24,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HandleEmail implements Runnable {
-	private static final Logger logger = Logger.getLogger(HandleEmail.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(HandleEmail.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private Event event;
 	private Event originalEvent;
 	private Action action;

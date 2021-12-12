@@ -5,17 +5,18 @@ package com.stalkedbythestate.sbts.streamer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stalkedbythestate.sbts.diskwatchdog.SpaceJSON;
+import com.stalkedbythestate.sbts.freak.Freak;
+import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.freakutils.ScriptRunner;
 import com.stalkedbythestate.sbts.freakutils.ScriptRunnerResult;
+import com.stalkedbythestate.sbts.json.CameraStatusJSON;
+import com.stalkedbythestate.sbts.json.SystemStatusJSON;
 import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.config.DiskState;
 import com.stalkedbythestate.sbts.sbtsdevice.config.PhidgetDevice;
-import com.stalkedbythestate.sbts.freak.Freak;
-import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import com.stalkedbythestate.sbts.json.CameraStatusJSON;
-import com.stalkedbythestate.sbts.json.SystemStatusJSON;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +28,7 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns={"/systemstatusgetjson"})
 public class SystemStatusGetJSON extends HttpServlet {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(SystemStatusGetJSON.class);
 	private static final long serialVersionUID = -4661056813441955903L;
 	private SbtsDeviceConfig sbtsConfig;

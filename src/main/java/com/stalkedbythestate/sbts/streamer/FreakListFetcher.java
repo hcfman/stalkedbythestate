@@ -2,9 +2,10 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class FreakListFetcher {
-	private final Logger logger = Logger.getLogger(FreakListFetcher.class);
+	private final Logger logger = LoggerFactory.getLogger(FreakListFetcher.class);
 	private SbtsDeviceConfig sbtsConfig;
 	private VideoType videoType;
 	private List<RemoteCameraSpec> remoteCameraSpecList;

@@ -3,10 +3,11 @@ package com.stalkedbythestate.sbts.streamer;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.google.gson.Gson;
-import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
 import com.stalkedbythestate.sbts.eventlib.HttpAuthenticator;
 import com.stalkedbythestate.sbts.json.CameraListJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.FreakDevice;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -18,8 +19,8 @@ import java.net.URL;
 import java.util.Arrays;
 
 public class HandleRemoteCamListFetch implements Runnable {
-	private final static Logger logger = Logger.getLogger(HandleRemoteCamListFetch.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private final static Logger logger = LoggerFactory.getLogger(HandleRemoteCamListFetch.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private volatile RemoteFreakSpec remoteFreakSpec;
 	private HttpAuthenticator authenticator;
 	

@@ -3,7 +3,8 @@ package com.stalkedbythestate.sbts.eh;
 // Copyright (c) 2021 Kim Hendrikse
 
 import com.stalkedbythestate.sbts.eventlib.SyntheticTriggerEvent;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -11,7 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class SyntheticEventManagerImpl implements SyntheticEventManager {
-	private static final Logger logger = Logger.getLogger(SyntheticEventManagerImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(SyntheticEventManagerImpl.class);
 	private Map<String, Set<Trigger>> eventMap = new HashMap<String, Set<Trigger>>();
 	private Map<String, Long> lastTriggered = new HashMap<String, Long>();
 

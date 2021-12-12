@@ -5,7 +5,8 @@ package com.stalkedbythestate.sbts.streamer;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,7 +24,7 @@ import java.util.regex.Pattern;
 
 @WebServlet(urlPatterns={"/changestate"})
 public class ChangeState extends HttpServlet {
-	private static final Logger logger = Logger.getLogger(ChangeState.class);
+	private static final Logger logger = LoggerFactory.getLogger(ChangeState.class);
 	private static final long serialVersionUID = -6553005828381942832L;
 	SbtsDeviceConfig sbtsConfig;
 	FreakApi freak;

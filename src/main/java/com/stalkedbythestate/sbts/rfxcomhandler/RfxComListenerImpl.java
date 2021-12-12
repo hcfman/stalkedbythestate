@@ -8,12 +8,13 @@ import com.stalkedbythestate.sbts.rfxcomlib.Packet;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxComListener;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomCommand;
 import com.stalkedbythestate.sbts.rfxcomlib.RfxcomOperator;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RfxComListenerImpl implements RfxComListener {
-	private static final Logger logger = Logger
+	private static final Logger logger = LoggerFactory
 			.getLogger(RfxComListenerImpl.class);
-	private static final Logger rfxcomLogger = Logger.getLogger("rfxcom");
+	private static final Logger rfxcomLogger = LoggerFactory.getLogger("rfxcom");
 	private RfxcomCommand command;
 	private FreakApi freak;
 

@@ -5,7 +5,8 @@ package com.stalkedbythestate.sbts.streamer;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ import java.util.Date;
 @WebServlet(urlPatterns={"/img"})
 public class Img extends HttpServlet {
 	private static final long serialVersionUID = 5019870886557760386L;
-	private static final Logger logger = Logger.getLogger(Img.class);
+	private static final Logger logger = LoggerFactory.getLogger(Img.class);
 	SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 

@@ -5,7 +5,8 @@ package com.stalkedbythestate.sbts.streamer;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,7 +19,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns={"/systemlog"})
 public class SystemLog extends HttpServlet {
 	private static final long serialVersionUID = -8251898422090747529L;
-	private static final Logger logger = Logger.getLogger(SystemLog.class);
+	private static final Logger logger = LoggerFactory.getLogger(SystemLog.class);
 	SbtsDeviceConfig sbtsConfig;
 	FreakApi freak;
 

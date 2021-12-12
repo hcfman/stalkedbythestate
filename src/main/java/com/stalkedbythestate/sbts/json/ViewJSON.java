@@ -5,11 +5,12 @@ package com.stalkedbythestate.sbts.json;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
-import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
+import com.stalkedbythestate.sbts.sbtsdevice.config.CameraDevice;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.VideoType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,7 +23,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ViewJSON {
-	private static final Logger logger = Logger.getLogger(ViewJSON.class);
+	private static final Logger logger = LoggerFactory.getLogger(ViewJSON.class);
 	private FreakApi freak;
 	@Expose
 	private int arraySize;

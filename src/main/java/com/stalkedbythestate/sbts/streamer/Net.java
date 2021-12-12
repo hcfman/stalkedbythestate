@@ -2,12 +2,13 @@ package com.stalkedbythestate.sbts.streamer;
 
 // Copyright (c) 2021 Kim Hendrikse
 
-import com.stalkedbythestate.sbts.sbtsdevice.config.HttpTrigger;
 import com.stalkedbythestate.sbts.eventlib.HttpTriggerEvent;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
+import com.stalkedbythestate.sbts.sbtsdevice.config.HttpTrigger;
 import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
@@ -22,8 +23,8 @@ import java.util.List;
 @WebServlet(urlPatterns={"/net", "/guest/net"})
 public class Net extends HttpServlet {
 	private static final long serialVersionUID = 8142007339282202725L;
-	private static final Logger logger = Logger.getLogger(Net.class);
-	private static final Logger opLogger = Logger.getLogger("operations");
+	private static final Logger logger = LoggerFactory.getLogger(Net.class);
+	private static final Logger opLogger = LoggerFactory.getLogger("operations");
 	private SbtsDeviceConfig sbtsConfig;
 	private FreakApi freak;
 	private boolean guest;

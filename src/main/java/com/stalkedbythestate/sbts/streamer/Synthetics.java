@@ -4,15 +4,16 @@ package com.stalkedbythestate.sbts.streamer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SynthTrigger;
-import com.stalkedbythestate.sbts.sbtsdevice.configimpl.SynthTriggerImpl;
 import com.stalkedbythestate.sbts.eventlib.ConfigureCombinationEventsEvent;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
-import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
 import com.stalkedbythestate.sbts.json.ResultMessage;
 import com.stalkedbythestate.sbts.json.SyntheticJSON;
-import org.apache.log4j.Logger;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SbtsDeviceConfig;
+import com.stalkedbythestate.sbts.sbtsdevice.config.SynthTrigger;
+import com.stalkedbythestate.sbts.sbtsdevice.configimpl.SynthTriggerImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,7 +28,7 @@ import java.util.Map;
 @WebServlet(urlPatterns={"/synthetics"})
 public class Synthetics extends HttpServlet {
 	private static final long serialVersionUID = -4211061015117394122L;
-	private static final Logger logger = Logger.getLogger(Synthetics.class);
+	private static final Logger logger = LoggerFactory.getLogger(Synthetics.class);
 	SbtsDeviceConfig sbtsConfig;
 	FreakApi freak;
 
