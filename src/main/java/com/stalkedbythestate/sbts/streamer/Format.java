@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -49,6 +50,11 @@ public class Format extends HttpServlet {
 	@RequestMapping("/format")
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher view = request
+				.getRequestDispatcher("/jsp/content/components/ErrorPage.jsp");
+		view.forward(request, response);
+/*
+
 		if (freak == null)
 			freak = Freak.getInstance();
 
@@ -81,6 +87,7 @@ public class Format extends HttpServlet {
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		out.print(gson.toJson(resultMessage));
+*/
 	}
 
 }

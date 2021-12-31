@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -60,6 +61,14 @@ public class Net extends HttpServlet {
 	@RequestMapping(value={"/net", "/guest/net"})
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		// Only allow post requests. Rudimentary protection against CSRF attack
+		if (!request.getMethod().equals("POST")) {
+			RequestDispatcher view = request
+					.getRequestDispatcher("/jsp/content/components/ErrorPage.jsp");
+			view.forward(request, response);
+			return;
+		}
+
 		if (freak == null)
 			freak = Freak.getInstance();
 

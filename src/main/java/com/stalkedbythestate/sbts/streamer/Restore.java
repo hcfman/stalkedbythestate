@@ -87,6 +87,13 @@ public class Restore extends HttpServlet {
 	@RequestMapping("/restore")
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		if (!request.getMethod().equals("POST")) {
+			RequestDispatcher view = request
+					.getRequestDispatcher("/jsp/content/components/ErrorPage.jsp");
+			view.forward(request, response);
+			return;
+		}
+
 		response.setContentType("application/json");
 
 		synchronized (freak) {

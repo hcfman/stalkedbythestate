@@ -43,8 +43,7 @@
 		<script type="text/javascript">
 			function dispatch(sender, name) {
 				$(sender).addClass('button-active');
-				jQuery.get('net?timestamp=' + new Date().getTime() +
-						'&event=' + name, function (data) {
+				jQuery.post('net', {'timestamp': new Date().getTime(), 'event': name}, function (data) {
 					if (!data.match(/^Ok\s/)) {
 						$(sender).addClass('button-error');
 					}

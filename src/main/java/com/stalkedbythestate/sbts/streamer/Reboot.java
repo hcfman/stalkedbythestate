@@ -5,6 +5,7 @@ package com.stalkedbythestate.sbts.streamer;
 import com.stalkedbythestate.sbts.freak.Freak;
 import com.stalkedbythestate.sbts.freak.api.FreakApi;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +28,13 @@ public class Reboot extends HttpServlet {
 		if (freak == null)
 			freak = Freak.getInstance();
 
-		Restarter.reboot(freak);
+		if (request.getMethod().equals("POST")) {
+			Restarter.reboot(freak);
+		} else {
+			RequestDispatcher view = request
+					.getRequestDispatcher("/jsp/content/components/ErrorPage.jsp");
+			view.forward(request, response);
+		}
 	}
 
 }

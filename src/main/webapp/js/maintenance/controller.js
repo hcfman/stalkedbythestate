@@ -63,7 +63,7 @@ MaintenanceController = function () {
 			jQuery.ajax( {
 				cache	: false,
 	            url		: 'reboot',
-	            type	: 'GET',
+	            type	: 'POST',
 	            
 	            contentType: 'application/json',
 	            dataType: 'json'
@@ -79,7 +79,7 @@ MaintenanceController = function () {
 			jQuery.ajax( {
 				cache	: false,
 				url		: 'restart',
-				type	: 'GET',
+				type	: 'POST',
 
 				contentType: 'application/json',
 				dataType: 'json'
@@ -95,7 +95,7 @@ MaintenanceController = function () {
 			jQuery.ajax( {
 				cache	: false,
 	            url		: 'shutdown',
-	            type	: 'GET',
+	            type	: 'POST',
 	            
 	            contentType: 'application/json',
 	            dataType: 'json'
