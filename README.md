@@ -16,5 +16,8 @@ In addition to providing video alerting and logging it also supports some limite
 
 The whole system is **installed with just one command**. You can choose the Yolo algorithm by uncommented the one you wish.
 
-This release is in preparation stage
+For detailed tutorials about using this software please view my YouTube channel
 
+https://www.youtube.com/channel/UCXn7Z37_xwuxLPpcPTtdNRQ
+
+Kim Hendrikse
