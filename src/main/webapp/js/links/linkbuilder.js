@@ -157,14 +157,17 @@ LinkBuilder = new (function () {
 	
 	this.createEventsLink = function (params, events) {
 		var events = events.split('\n');
-		var link = '';
-		
-		if (events.length > 0 && events[0] != '') {
-			for (var i = 0, c = events.length; i < c; i++) {
-				events[i] = encodeURIComponent(events[i]);
+		var newEvents = new Array();
+
+		for (var i = 0, c = events.length; i < c; i++) {
+			events[i] = events[i].trim();
+			if (events[i].length > 0) {
+				newEvents.push(encodeURIComponent(events[i]));
 			}
-			link += 'eventlist=' + events.join(',');
-			params.push(link);
+		}
+
+		if (newEvents.length > 0) {
+			params.push('eventlist=' + newEvents.join(','));
 		}
 	};
 	
