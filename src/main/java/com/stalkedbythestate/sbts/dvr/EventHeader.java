@@ -50,7 +50,7 @@ public class EventHeader {
 		printWriter.println( description );
 		log.debug("Created print writer on " + file);
 
-		dirname = "dvr_images/" + cam + "/" + dateString + "/" + eventTime;
+		dirname = "images/" + cam + "/" + dateString + "/" + eventTime;
 		File dirFile = new File(freak.getSbtsBase() + "/disk/sbts/" + dirname);
 		dirFile.mkdirs();
 	}

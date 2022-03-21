@@ -213,7 +213,7 @@ public class ViewJSON {
 						if (logger.isDebugEnabled())
 							logger.debug("Checking mjpg");
 						File mjpegDIR = new File(f.getPath().replaceAll(
-								"/events/", "/dvr_images/"));
+								"/events/", "/images/"));
 						if (!mjpegDIR.isDirectory() || !mjpegDIR.canRead()) {
 							if (logger.isDebugEnabled())
 								logger.debug("It's not a directory or I can't read it, skipping");
