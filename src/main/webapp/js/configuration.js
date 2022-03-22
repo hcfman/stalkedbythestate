@@ -137,7 +137,7 @@ X10Action = function (aEventName, aDescription, aHouseCode, aUnitCode) {
 HttpAction = function (aEventName, aDescription) {
 	AbstractAction.call(this, aEventName, aDescription);
 	this.actionType 	= ActionType.SEND_HTTP;
-	this.url			= 'http://www.example.com';
+	this.url			= 'http://127.0.0.1:8080/sbts/net';
 	this.methodType		= 'GET';
 	this.username		= '';
 	this.password		= '';
