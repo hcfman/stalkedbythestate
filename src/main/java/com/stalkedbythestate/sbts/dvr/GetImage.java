@@ -77,7 +77,7 @@ public class GetImage {
 
 		}
 
-		if (contentLength < 2 || contentLength > 500000)
+		if (contentLength < 2 || contentLength > 2000000)
 			return null;
 
 		// System.out.println("contentLength " + contentLength + " bytes");
