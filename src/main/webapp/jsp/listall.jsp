@@ -215,11 +215,11 @@ function load( cam, day, event, newWindow ) {
 <%
 	if (videoType == VideoType.MJPEG) {
 %>
-		url = webPrefixes[cam] + 'view?t=' + event + "&cam=" + offsetMapping[cam];
+		url = webPrefixes[cam] + 'view?t=' + event + "&cam=" + offsetMapping[cam] + "&" + Date.now();
 <%
 	} else if (videoType == VideoType.PJPEG) {
 %>
-		url = webPrefixes[cam] + 'pview?t=' + event + "&cam=" + offsetMapping[cam];
+		url = webPrefixes[cam] + 'pview?t=' + event + "&cam=" + offsetMapping[cam] + "&" + Date.now();
 <%
 	} else if (videoType == VideoType.WEBM) {
 %>
